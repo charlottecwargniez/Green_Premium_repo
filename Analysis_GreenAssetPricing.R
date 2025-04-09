@@ -124,6 +124,8 @@ propagate_values <- function(dt, relationships) {
 
 # Replace IMPROVEMENT ID duplicatess
 replace_improvement_id <- function(id) {
+  if (id %in% c(2,3)) return(1)
+  if (id ==9) return(10)
   if (id %in% c(12, 13, 14, 15, 17, 18)) return(11)
   if (id == 21) return(20)
   if (id == 24) return(30)
