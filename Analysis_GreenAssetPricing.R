@@ -122,20 +122,34 @@ propagate_values <- function(dt, relationships) {
 }
 
 
-# Replace IMPROVEMENT ID duplicatess
+# Replace IMPROVEMENT ID duplicates
 replace_improvement_id <- function(id) {
   if (id %in% c(2,3)) return(1)
-  if (id ==9) return(10)
   if (id %in% c(12, 13, 14, 15, 17, 18)) return(11)
   if (id == 21) return(20)
   if (id == 24) return(30)
   if (id == 31) return(25)
+  if (id == 28) return(43)
   if (id %in% c(29, 32)) return(27)
   if (id == 38) return(37)
+  if (id == 39) return(23)
   if (id == 41) return(40)
   if (id == 61) return(59)
   if (id == 62) return(60)
   return(id)
+}
+
+
+# Group Improvements by category 
+group_improvents <- function(id) {
+  if (id %in% c(2,3)) return(1)
+  if (id %in% c(7,63)) return(6)
+  if (id == 46) return(45)
+  if (id %in% c(11,12,13,14,15,17,18)) return(16)
+  if (id %in% c(21,22,27,28,29,43,36,37,38,40,41)) return(20)
+  if (id %in% c(39,24,25,26,49,50,59,61,60,62)) return(23)
+  if (id %in% c(9,10,56)) return(8)
+  if (id == 19) return(34)
 }
 
 
