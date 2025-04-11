@@ -1,5 +1,7 @@
 
 # --------------------------- CONFIGURATION ------------------------------------
+setwd('/Users/charlottewargniez/Desktop/GreenPremium/Green_Premium_repo')
+
 # IMPORT LIBRARIES -------------------------------------------------------------
 library(tidyverse)
 library(dplyr)
@@ -62,7 +64,6 @@ SELECT_ADDRESSES_REG <- c("ADDRESS","POSTCODE","PRIMARY","SECONDARY","STREET") #
 
 
 # Load Data  ----------------------------------------------------------
-setwd('/Users/charlottewargniez/Desktop/GreenPremium')
 
 # Read the first chunk
 chunk1 <- as.data.table(fread("data/cleaned/master_epcs.csv", nrows = 1e6, skip = 0, header = TRUE))
@@ -96,6 +97,7 @@ rm(chunk6)
 #Remove observations where Improvements ID NaN or empty
 master_epc <- master_epc[!is.na(master_epc$IMPROVEMENTS_IDs) & master_epc$IMPROVEMENTS_IDs != "", ]
 
+library(data.table)
 # Remove rows with UPRN is NA 
 master_epc <- master_epc [!is.na(UPRN)]
 master_epc[, UPRN := as.numeric(UPRN)]
@@ -103,6 +105,7 @@ master_epc[, UPRN := as.numeric(UPRN)]
 # Remove rows with EPC score > 100
 master_epc <- master_epc[CURRENT_ENERGY_EFFICIENCY <100]
 
+gc()
 
 # # Calculate time between inspections
 # master_epc[, date_as_numeric := as.numeric(INSPECTION_DATE)]
@@ -111,6 +114,7 @@ master_epc <- master_epc[CURRENT_ENERGY_EFFICIENCY <100]
 # master_epc<- master_epc[time_between_inspections > 0]
 
 # GLOBAL VARIABLES ----------------------------------------------------------
+
 # REGRESSION PARAMETERS
 controls <- "EXTENSION_COUNT + PROPERTY_TYPE + TOTAL_FLOOR_AREA + CONSTRUCTION_AGE_BAND + MAIN_FUEL + NUMBER_HABITABLE_ROOMS + ESTATE"
 time_fe <- "YEAR_f + MONTH_f"
@@ -134,170 +138,7 @@ deflator <- deflator[, .(YEAR, MONTH, `From 2019-Jan`)]
 deflator[,XT_SET2 :=YEAR*100+MONTH]
 
 # Helper Functions ----------------------------------------------------------
-
-# Cleans a single address string by trimming, removing special characters, and converting to uppercase
-clean_address <- function(address) {
-  address %>%
-    str_trim() %>% # Remove leading and trailing whitespace
-    str_remove_all("\\.") %>% # Remove periods
-    str_to_upper() # Convert to uppercase
-}
-
-# Define a function to find positions of elements in vec1 that do not match any in vec2
-find_unmatched_positions <- function(vec1, vec2) {
-  match_results <- match(vec1, vec2)  # Find matches
-  na_positions <- which(is.na(match_results)) # Positions of NA values indicate unmatched elements
-  return(list(na_positions))
-}
-
-# Function to run regression and extract coefficients
-run_regression <- function(formula, data, cluster_se, pattern_controls) {
-  
-  # Perform SGD
-  #sgd_model <- sgd(formula, data, model = "lm", sgd.control = list(reltol = 1e-8, npasses = 50))
-  # coeffs_std <- coefficients(sgd_model)
-  # transform into data.frame with correct regressor names
-  
-  # Perform OLS
-  reg_output <- lm(formula, data = data)
-  coeffs_std <- data.frame(summary(reg_output)$coefficients, cluster = cluster_se)
-  
-  # Keep essentials
-  coeffs_std[!grepl(pattern = pattern_controls, rownames(coeffs_std)), ]
-}
-
-# Function to keep occurrences larger than 1
-keep_occurrences <- function(data, var1, occurrence) {
-  setDT(data)
-  n_occur <- data[, .N, by = var1][N > occurrence]
-  data <- data[var1 %in% n_occur$var1] 
-  rm(n_occur)
-  return(data)
-}
-
-# Function to calculate the mode
-get_mode <- function(x) {
-  ux <- unique(na.omit(x))
-  ux[which.max(tabulate(match(x, ux)))]
-}
-
-# Function to round 1st decimals if not whole number
-custom_round <- function(Value){
-  Value <- if_else(abs(Value - round(Value)) < .Machine$double.eps^0.5, as.character(as.integer(Value)), sprintf("%.1f", Value))
-}
-
-# Function to sum numeric values in a character vector
-sum_values <- function(vector) {
-  # Split the vector by commas and convert to numeric
-  numeric_values <- as.numeric(unlist(strsplit(vector, ",")))
-  
-  # Sum the numeric values
-  total_sum <- sum(numeric_values, na.rm = TRUE)
-  
-  return(total_sum)
-}
-
-# Create a function to format the regression output
-format_reg_output <- function(reg_output) {
-  reg_output %>%
-    mutate(
-      p.value = ifelse(Pr...t.. < 0.01, "***",
-                       ifelse(Pr...t.. < 0.05, "**",
-                              ifelse(Pr...t.. < 0.1, "*", ""))),
-      estimate = sprintf("%.2f", Estimate),
-      std.error = sprintf("(%.2f)", Std..Error)
-    ) %>%
-    select(estimate, std.error, p.value) %>%
-    mutate(estimate = paste0(estimate, p.value)) %>%
-    select(estimate) # , std.error
-}
-
-# Custom cbind function that pads vectors with NAs
-cbind_pad <- function(..., fill = NA) {
-  # Collect all input arguments into a list
-  args <- list(...)
-  
-  # Determine the maximum number of rows needed
-  nrow <- max(sapply(args, NROW))
-  
-  # Pad each input to the maximum length
-  padded_args <- lapply(args, function(x) {
-    if (is.null(dim(x))) {  
-      # If x is a vector, convert it to a single-column matrix
-      x <- matrix(x, ncol = 1) 
-    }
-    # Calculate the number of rows to add
-    rows_to_add <- nrow - NROW(x)
-    if (rows_to_add > 0) { 
-      # Pad the matrix with the fill value (default is NA)
-      x <- rbind(x, matrix(fill, nrow = rows_to_add, ncol = NCOL(x)))
-    }
-    return(x)
-  })
-  
-  # Combine the padded matrices using cbind
-  do.call(cbind, padded_args) 
-}
-
-# Create a function to write a custom csv
-custom_write_csv <- function(reg_output_list,csv_file_name) {
-  # Apply the formatting function to each regression output
-  formatted_reg_output <- lapply(reg_output_list, format_reg_output)
-  
-  # Combine the formatted regression outputs into a single data frame
-  combined_reg_output <- do.call(cbind, formatted_reg_output)
-  
-  # Save the combined regression output to a CSV file
-  write.csv(combined_reg_output, csv_file_name,
-            row.names = TRUE)
-}
-
-# Create a function to copy values across df
-copy_id_value <- function(dt, from_id, to_id, column) {
-  dt[IMPROVEMENT_ID == to_id, (column) := dt[IMPROVEMENT_ID == from_id, get(column)]]
-}
-
-# Helper function to split IDs
-split_ids <- function(ids) {
-  as.numeric(unlist(strsplit(ids, ",")))
-}
-
-
-# Replace IMPROVEMENT ID duplicates sassa
-replace_improvement_id <- function(id) {
-  if (id %in% c(12, 13, 14, 15, 17, 18)) return(11)
-  if (id == 21) return(20)
-  if (id == 24) return(30)
-  if (id == 31) return(25)
-  if (id %in% c(29, 32)) return(27)
-  if (id == 38) return(37)
-  if (id == 41) return(40)
-  if (id == 61) return(59)
-  if (id == 62) return(60)
-  return(id)
-}
-
-
-
-# Define a function to format p-values
-format_p_value <- function(p) {
-  if (p < 0.001) {
-    return(sprintf("%.3f ***", p))
-  } else if (p < 0.01) {
-    return(sprintf("%.3f **", p))
-  } else if (p < 0.05) {
-    return(sprintf("%.3f *", p))
-  } else {
-    return(sprintf("%.3f", p))
-  }
-}
-
-
-gc()
-
-
-
-
+source("functions/help_func.R")
 
 # -------------------- DESCRIPTIVE STATS -------------------------------------
 
@@ -355,27 +196,6 @@ ggplot(master_epc, aes(x = factor(inspection_number), y = CURRENT_ENERGY_EFFICIE
   # Merge ID, texts and IMPACT variables
   improvements_IDs <- merge(x = improvements_IDs, y = impact_improvements, by = "IMPROVEMENT_ID", all.x = T)
   rm(impact_improvements)
-  
-  # Fill in missing values from duplicated dummies
-  # for (columns in all_of(impact_names)) {
-  #   print(columns)
-  #   copy_id_value(improvements_IDs, from_id = 11, to_id = 12, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 11, to_id = 13, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 11, to_id = 14, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 11, to_id = 15, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 11, to_id = 17, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 11, to_id = 18, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 20, to_id = 21, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 24, to_id = 30, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 25, to_id = 31, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 27, to_id = 29, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 27, to_id = 32, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 37, to_id = 38, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 40, to_id = 41, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 59, to_id = 61, column = columns)
-  #   copy_id_value(improvements_IDs, from_id = 60, to_id = 62, column = columns)
-  # }
-  # 
   
   ## Optional: delete rows with NA (if not copied above) !!!!!!!!!!!!
   improvements_IDs <- improvements_IDs [!is.na(IMPACT_EPC)]

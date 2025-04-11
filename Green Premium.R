@@ -37,6 +37,7 @@ library(sgd)
 rm(list = ls())
 
 # --------------------------- CONFIGURATION ------------------------------------
+setwd('/Users/charlottewargniez/Desktop/GreenPremium/Green_Premium_repo')
 
 # Set flags to execute sections of code (0 no, 1 yes)
 gen_ppd_epc_uprn_msk <- 0 #Line 227
@@ -50,7 +51,7 @@ gen_master_data <- 0
 clean_master_epc <- 0
 pre_analysis <- 0
 analysis <- 0
-analysis_EPC <- 0
+analysis_EPC <- 1
 descriptive <- 0 #Line 1323
 
 # SELECTION EQUATIONS ----------------------------------------------------------
@@ -102,124 +103,7 @@ total_IDs <- 63 # total number of IMPROVEMENT_IDs
 
 
 # ------------------------ Helper Functions ------------------------------------
-
-# Cleans a single address string by trimming, removing special characters, and converting to uppercase
-clean_address <- function(address) {
-  address %>%
-    str_trim() %>% # Remove leading and trailing whitespace
-    str_remove_all("\\.") %>% # Remove periods
-    str_to_upper() # Convert to uppercase
-}
-
-# Define a function to find positions of elements in vec1 that do not match any in vec2
-find_unmatched_positions <- function(vec1, vec2) {
-  match_results <- match(vec1, vec2)  # Find matches
-  na_positions <- which(is.na(match_results)) # Positions of NA values indicate unmatched elements
-  return(list(na_positions))
-}
-
-# Function to run regression and extract coefficients
-run_regression <- function(formula, data, cluster_se, pattern_controls) {
-
-  # Perform SGD
-  #sgd_model <- sgd(formula, data, model = "lm", sgd.control = list(reltol = 1e-8, npasses = 50))
-  # coeffs_std <- coefficients(sgd_model)
-  # transform into data.frame with correct regressor names
-
-  # Perform OLS
-  reg_output <- lm(formula, data = data)
-  coeffs_std <- data.frame(summary(reg_output)$coefficients, cluster = cluster_se)
-
-  # Keep essentials
-  coeffs_std[!grepl(pattern = pattern_controls, rownames(coeffs_std)), ]
-}
-
-# Function to keep occurrences larger than 1
-keep_occurrences <- function(data, var1, occurrence) {
-  setDT(data)
-  n_occur <- data[, .N, by = var1][N > occurrence]
-  data <- data[var1 %in% n_occur$var1]
-  rm(n_occur)
-  return(data)
-}
-
-# Function to calculate the mode
-get_mode <- function(x) {
-  ux <- unique(na.omit(x))
-  ux[which.max(tabulate(match(x, ux)))]
-}
-
-# Function to round 1st decimals if not whole number
-custom_round <- function(Value){
-  Value <- if_else(abs(Value - round(Value)) < .Machine$double.eps^0.5, as.character(as.integer(Value)), sprintf("%.1f", Value))
-}
-
-# Function to sum numeric values in a character vector
-sum_values <- function(vector) {
-  # Split the vector by commas and convert to numeric
-  numeric_values <- as.numeric(unlist(strsplit(vector, ",")))
-
-  # Sum the numeric values
-  total_sum <- sum(numeric_values, na.rm = TRUE)
-
-  return(total_sum)
-}
-
-# Create a function to format the regression output
-format_reg_output <- function(reg_output) {
-  reg_output %>%
-    mutate(
-      p.value = ifelse(Pr...t.. < 0.01, "***",
-                       ifelse(Pr...t.. < 0.05, "**",
-                              ifelse(Pr...t.. < 0.1, "*", ""))),
-      estimate = sprintf("%.2f", Estimate),
-      std.error = sprintf("(%.2f)", Std..Error)
-    ) %>%
-    select(estimate, std.error, p.value) %>%
-    mutate(estimate = paste0(estimate, p.value)) %>%
-    select(estimate, std.error)
-}
-
-# Custom cbind function that pads vectors with NAs
-cbind_pad <- function(..., fill = NA) {
-  # Collect all input arguments into a list
-  args <- list(...)
-
-  # Determine the maximum number of rows needed
-  nrow <- max(sapply(args, NROW))
-
-  # Pad each input to the maximum length
-  padded_args <- lapply(args, function(x) {
-    if (is.null(dim(x))) {
-      # If x is a vector, convert it to a single-column matrix
-      x <- matrix(x, ncol = 1)
-    }
-    # Calculate the number of rows to add
-    rows_to_add <- nrow - NROW(x)
-    if (rows_to_add > 0) {
-      # Pad the matrix with the fill value (default is NA)
-      x <- rbind(x, matrix(fill, nrow = rows_to_add, ncol = NCOL(x)))
-    }
-    return(x)
-  })
-
-  # Combine the padded matrices using cbind
-  do.call(cbind, padded_args)
-}
-
-# Create a function to write a custom csv
-custom_write_csv <- function(reg_output_list,csv_file_name) {
-  # Apply the formatting function to each regression output
-  formatted_reg_output <- lapply(reg_output_list, format_reg_output)
-
-  # Combine the formatted regression outputs into a single data frame
-  combined_reg_output <- do.call(cbind, formatted_reg_output)
-
-  # Save the combined regression output to a CSV file
-  write.csv(combined_reg_output, csv_file_name,
-            row.names = TRUE)
-}
-
+source("functions/help_func.R")
 
 # -------------------------- Main Execution ------------------------------------
 
@@ -1258,7 +1142,12 @@ if (analysis_EPC == 1){
 
   # Level variables
   master_dataset[, `:=`(YEAR_f = factor(YEAR), MONTH_f = factor(MONTH))]
-
+  
+  # Replace Improvement IDs based on duplicates
+  master_dataset <- master_dataset %>%
+    mutate(IMPROVEMENTS_IDs_list = lapply(IMPROVEMENTS_IDs_list, function(x) sapply(x, replace_improvement_id)))
+  
+  
   # Find all covariates that start with "ID_"
   covariates <- grep("^ID_", names(master_dataset), value = TRUE)
 
