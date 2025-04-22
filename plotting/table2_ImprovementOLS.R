@@ -11,7 +11,7 @@
 # OUTPUT -> table2a_ImprovementsOLS.csv / table2b_ImprovementsOLS.csv /
 
 #Load Data 
-source("clean_master_EPC.R")
+source("functions/clean_master_EPC.R")
 
 improvements_IDs <- fread("data/cleaned/improvement_ID_text.csv") # load the list of IDs
 improvements_IDs$IMPROVEMENT_ID <- as.numeric(improvements_IDs$IMPROVEMENT_ID)
