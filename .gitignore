@@ -1,5 +1,25 @@
 # this is a gitignore file for an R project
-renv/
 
-.Rproj.user
+#Ignore data files needed for the project (please add indepentendly)
 data/
+
+# Ignore the renv library
+renv/library/
+
+# Ignore RStudio project user settings
+.Rproj.user/
+
+# Ignore history and workspace files
+.Rhistory
+.RData
+
+# Ignore the activated renv environment file
+renv/activate.R
+
+# Ignore compiled files
+*.o
+*.dll
+*.so
+
+# Ignore temporary files
+*.log
