@@ -1,3 +1,5 @@
-.venv/
+# this is a gitignore file for an R project
+renv/
+
 .Rproj.user
 data/
