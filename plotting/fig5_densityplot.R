@@ -107,82 +107,95 @@ theme_minimal()
 
 
 
-# -------- Clean construction band Column ----- 
+# ------ 2. Density Plot per Age Band --------------------------------------------------------
 # To DO: Make this a separate function 
 ## Clean Construction_AGE_BAND -------
 
-# Regular expression pattern for valid year ranges
-year_range_pattern <- "England and Wales: \\d{4}-\\d{4}"
-
-# Regular expression pattern for single years
-single_year_pattern <- "^\\d{4}$"
-
-# Regular expression pattern for 'onwards'
-onwards_pattern <- "England and Wales: \\d{4} onwards"
-
-# Define year ranges for single years
-year_ranges <- list(
-  "2021" = "2021-2022",
-  "2020" = "2019-2020",
-  "2019" = "2019-2020",
-  "2018" = "2017-2018",
-  "2017" = "2017-2018",
-  "2016" = "2015-2016",
-  "2015" = "2015-2016",
-  "2014" = "2013-2014",
-  "2013" = "2013-2014",
-  "2012" = "2012-2022",
-  "2011" = "2007-2011",
-  "2010" = "2007-2010",
-  "2007" = "2007-2022",
-  "2004" = "2003-2006",
-  "2002" = "2001-2002",
-  "1876" = "1876-1880"  # Adjust as necessary
+# Define mappings for single years and special strings (including the original weird strings)
+year_to_bucket <- list(
+  # single years mapped to buckets
+  "1876" = "before 1900",
+  "1890" = "before 1900",
+  "1900" = "1900-2000",
+  "1930" = "1900-2000",
+  "1950" = "1900-2000",
+  "1967" = "1900-2000",
+  "1976" = "1900-2000",
+  "1983" = "1900-2000",
+  "1991" = "1900-2000",
+  "1996" = "1900-2000",
+  "2000" = "1900-2000",
+  "2002" = "after 2000",
+  "2003" = "after 2000",
+  "2004" = "after 2000",
+  "2006" = "after 2000",
+  "2007" = "after 2000",
+  "2009" = "after 2000",
+  "2010" = "after 2000",
+  "2011" = "after 2000",
+  "2012" = "after 2000",
+  "2013" = "after 2000",
+  "2014" = "after 2000",
+  "2015" = "after 2000",
+  "2016" = "after 2000",
+  "2017" = "after 2000",
+  "2018" = "after 2000",
+  "2019" = "after 2000",
+  "2020" = "after 2000",
+  "2021" = "after 2000",
+  "2022" = "after 2000",
+  "2023" = "after 2000",
+  
+  # special entries mapped to buckets
+  "England and Wales: before 1900" = "before 1900",
+  "England and Wales: 1900-1929" = "1900-2000",
+  "England and Wales: 1930-1949" = "1900-2000",
+  "England and Wales: 1950-1966" = "1900-2000",
+  "England and Wales: 1967-1975" = "1900-2000",
+  "England and Wales: 1976-1982" = "1900-2000",
+  "England and Wales: 1983-1990" = "1900-2000",
+  "England and Wales: 1991-1995" = "1900-2000",
+  "England and Wales: 1996-2002" = "after 2000",
+  "England and Wales: 2003-2006" = "after 2000",
+  "England and Wales: 2007-2011" = "after 2000",
+  "England and Wales: 2007 onwards" = "after 2000",
+  "England and Wales: 2012 onwards" = "after 2000"
 )
 
-# Clean the CONSTRUCTION_AGE_BAND column
-year_range_pattern <- "^England and Wales: \\d{4}-\\d{4}$"
-onwards_pattern <- "^England and Wales: \\d{4} onwards$"
+# Now apply the logic
+costs_per_UPRN[, CONSTRUCTION_AGE_BAND := sapply(CONSTRUCTION_AGE_BAND, function(x) year_to_bucket[[x]])]
 
-# Clean the CONSTRUCTION_AGE_BAND column
-costs_per_UPRN[, CONSTRUCTION_AGE_BAND := ifelse(
-  grepl(year_range_pattern, CONSTRUCTION_AGE_BAND), 
-  sub("England and Wales: ", "", CONSTRUCTION_AGE_BAND), 
-  ifelse(
-    grepl(onwards_pattern, CONSTRUCTION_AGE_BAND), 
-    paste0(sub("England and Wales: ", "", gsub(" onwards", "", CONSTRUCTION_AGE_BAND)), "-2022"), 
-    ifelse(
-      CONSTRUCTION_AGE_BAND %in% names(year_ranges),
-      year_ranges[CONSTRUCTION_AGE_BAND],
-      NA
-    )
-  )
-)]
-
-# remove NAs
+# remove NAs and NULLS 
 costs_per_UPRN <- costs_per_UPRN[!is.na(CONSTRUCTION_AGE_BAND)]
+costs_per_UPRN <- costs_per_UPRN[!costs_per_UPRN$CONSTRUCTION_AGE_BAND=="NULL"]
 
 # Make factor (categorical) values
-costs_per_UPRN[, Age_band := as.factor(CONSTRUCTION_AGE_BAND)]
+costs_per_UPRN$CONSTRUCTION_AGE_BAND <- unlist(costs_per_UPRN$CONSTRUCTION_AGE_BAND) #convert column from list to characters 
 costs_per_UPRN[, CONSTRUCTION_AGE_BAND := as.factor(CONSTRUCTION_AGE_BAND)]  
 
 # create a density plot with relative cost of retrofit to construction age 
 costs_per_UPRN[ , per_cost := Cost/PRICE*100]
-ggplot(costs_per_UPRN, aes(x = per_cost, fill = Age_band)) +
+ggplot(costs_per_UPRN, aes(x = per_cost, fill = CONSTRUCTION_AGE_BAND)) +
   geom_density(alpha = 0.5) +
   labs(
-    title = "Density Plot of Average Retrofitting Costs by Property Type",
-    x = "Relative Cost of Retrofiting (%)",
+    x = "Relative Retrofiting Cost (%)",
     y = "Density",
-    fill = "Property Type"
+    fill = "Construction Age Band"
   ) +
   xlim(c(0,15))
   theme_minimal()
+ggsave("output/plots/Density_retrofittingcosts_byAge.png", density_price, width = 8, height = 6)
 
-
-#normalise the distribution of price for each age band 
-costs_per_UPRN[, cost_mean_age := mean(Cost), by = Age_band]
+# Separate plots per construction age 
+ggplot(costs_per_UPRN, aes(x = Cost)) +
+  geom_density(fill = "steelblue", alpha = 0.6) +
+  facet_wrap(~ CONSTRUCTION_AGE_BAND, scales = "free_y", ncol = 4) +
+  theme_minimal()
+ggsave("output/plots/Density_Costs_seperatebyAge.png", density_price, width = 12, height = 6)
 
 # To DO: instead of simple density plot, instead compare distributions (normalized) of prices per age band 
+
+
+# ------- 3. Test Difference between Distributions by Age ------------- 
 
 
