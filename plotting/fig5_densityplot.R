@@ -1,7 +1,7 @@
-"""
-This plots Figure 3 in retrofitting article 
+#"""
+#This plots Figure 3 in retrofitting article 
 
-"""
+#"""
 
 # ---------------------------- SET UP ---------------------------------------
 
@@ -40,22 +40,25 @@ library(kableExtra)
 
 library(car)
 
-#_____ Plot ___________________________________________
+#_____ Load Data ___________________________________________
 
-## Density Plot of Cost per UPRN -----------------
-#use EPC recommendations value 
+#Read costs of UPRN (as calculated by the following EPC recommendations method - see improvements_costs.R for more detail)
+costs_per_UPRN <- as.data.table(fread("data/cleaned/costs_uprn_epc.csv"))
+setnames(costs_per_UPRN, "BY_EPC", "Cost") # replace column name 
 
-# Merge UPRNs from master_epc with indidual costs (Costs_per_UPRN) with master_dataset 
+# Merge UPRNs from master_epc with individual costs (Costs_per_UPRN) with master_dataset 
 master_dataset <- as.data.table(fread("data/cleaned/master_dataset_all.csv"))  #load master_dataset
 master_dataset[, UPRN := as.numeric(UPRN)]  
 master_dataset <- master_dataset[master_dataset[, .I[which.max(INSPECTION_DATE)], by = .(UPRN)]$V1]  #keep observations with latest inspection date
-master_dataset <- master_dataset[, .(UPRN, PROPERTY_TYPE, PRICE)] #keep only columns of interest 
+master_dataset <- master_dataset[, .(UPRN, PROPERTY_TYPE, PRICE, CONSTRUCTION_AGE_BAND )] #keep only columns of interest 
 costs_per_UPRN <- merge(x = costs_per_UPRN, y = master_dataset, by = "UPRN", all.x = TRUE, allow.cartesian = FALSE)
 setorder(costs_per_UPRN, UPRN)
 
 # remove NAs
 costs_per_UPRN <- costs_per_UPRN[!is.na(PRICE)]
 
+
+# ------ 1. Density Plot per Price --------------------------------------------------------
 # Create price range categories (adjust the breaks as per your dataset)
 costs_per_UPRN[, price_range := cut(PRICE, 
                                     breaks = c(0, 100000, 200000, 300000, 400000, 500000, Inf), 
@@ -63,9 +66,9 @@ costs_per_UPRN[, price_range := cut(PRICE,
                                     right = FALSE)]
 
 # Create a density plot with different shading for different price ranges
-density_price <- ggplot(costs_per_UPRN, aes(x = BY_EPC, fill = price_range)) +
+density_price <- ggplot(costs_per_UPRN, aes(x = Cost, fill = price_range)) +
   geom_density(alpha = 0.5) +
-  geom_vline(xintercept = 8945, color = "red", linetype = "dashed", size = 0.5) +
+  geom_vline(xintercept = 8945, color = "red", linetype = "dashed", linewidth = 0.5) +
   annotate("text", x = 8945, y = 0.00014, label = "Average retrofit costs", vjust = -0.5, angle = 90, color = "red", size = 4) +
   labs(
     x = "Retrofitting Cost (£)",
@@ -78,7 +81,7 @@ density_price <- ggplot(costs_per_UPRN, aes(x = BY_EPC, fill = price_range)) +
 ggsave("output/plots/Density_Average_Retrofitting_Costs.png", density_price, width = 8, height = 6)
 
 # Create a density plot with different shading for different property types
-ggplot(costs_per_UPRN, aes(x = BY_EPC, fill = PROPERTY_TYPE)) +
+ggplot(costs_per_UPRN, aes(x = Cost, fill = PROPERTY_TYPE)) +
   geom_density(alpha = 0.5) +
   labs(
     title = "Density Plot of Average Retrofitting Costs by Property Type",
@@ -87,14 +90,99 @@ ggplot(costs_per_UPRN, aes(x = BY_EPC, fill = PROPERTY_TYPE)) +
     fill = "Property Type"
   ) +
   theme_minimal()
-## Save file with costs per UPRN (EPC) and energy efficiency ------
 
-#select only columns of interest 
-costs_per_UPRN <- costs_per_UPRN[, .(UPRN, BY_EPC)]
 
-#merge with EPC information 
-f_data <- master_epc[, .(UPRN, CURRENT_ENERGY_EFFICIENCY, POTENTIAL_ENERGY_RATING, DIFF_ENERGY_EFFICIENCY, RISE_IN_EPC)]
-costs_per_UPRN <- merge(x = costs_per_UPRN, y = f_data, by = "UPRN", all.x = TRUE, allow.cartesian = FALSE) 
+# create a density plot with relative cost of retrofit to price of house
+costs_per_UPRN[ , per_cost := Cost/PRICE*100]
+ggplot(costs_per_UPRN, aes(x = per_cost, fill = price_range)) +
+  geom_density(alpha = 0.5) +
+  labs(
+    title = "Density Plot of Average Retrofitting Costs by Property Type",
+    x = "Relative Cost of Retrofiting (%)",
+    y = "Density",
+    fill = "Property Type"
+  ) +
+  xlim(c(0,15))
+theme_minimal()
 
-# save as new file (later for CBA)
-fwrite(costs_per_UPRN, "data/cleaned/costs_uprn_epc.csv") #Output File
+
+
+# -------- Clean construction band Column ----- 
+# To DO: Make this a separate function 
+## Clean Construction_AGE_BAND -------
+
+# Regular expression pattern for valid year ranges
+year_range_pattern <- "England and Wales: \\d{4}-\\d{4}"
+
+# Regular expression pattern for single years
+single_year_pattern <- "^\\d{4}$"
+
+# Regular expression pattern for 'onwards'
+onwards_pattern <- "England and Wales: \\d{4} onwards"
+
+# Define year ranges for single years
+year_ranges <- list(
+  "2021" = "2021-2022",
+  "2020" = "2019-2020",
+  "2019" = "2019-2020",
+  "2018" = "2017-2018",
+  "2017" = "2017-2018",
+  "2016" = "2015-2016",
+  "2015" = "2015-2016",
+  "2014" = "2013-2014",
+  "2013" = "2013-2014",
+  "2012" = "2012-2022",
+  "2011" = "2007-2011",
+  "2010" = "2007-2010",
+  "2007" = "2007-2022",
+  "2004" = "2003-2006",
+  "2002" = "2001-2002",
+  "1876" = "1876-1880"  # Adjust as necessary
+)
+
+# Clean the CONSTRUCTION_AGE_BAND column
+year_range_pattern <- "^England and Wales: \\d{4}-\\d{4}$"
+onwards_pattern <- "^England and Wales: \\d{4} onwards$"
+
+# Clean the CONSTRUCTION_AGE_BAND column
+costs_per_UPRN[, CONSTRUCTION_AGE_BAND := ifelse(
+  grepl(year_range_pattern, CONSTRUCTION_AGE_BAND), 
+  sub("England and Wales: ", "", CONSTRUCTION_AGE_BAND), 
+  ifelse(
+    grepl(onwards_pattern, CONSTRUCTION_AGE_BAND), 
+    paste0(sub("England and Wales: ", "", gsub(" onwards", "", CONSTRUCTION_AGE_BAND)), "-2022"), 
+    ifelse(
+      CONSTRUCTION_AGE_BAND %in% names(year_ranges),
+      year_ranges[CONSTRUCTION_AGE_BAND],
+      NA
+    )
+  )
+)]
+
+# remove NAs
+costs_per_UPRN <- costs_per_UPRN[!is.na(CONSTRUCTION_AGE_BAND)]
+
+# Make factor (categorical) values
+costs_per_UPRN[, Age_band := as.factor(CONSTRUCTION_AGE_BAND)]
+costs_per_UPRN[, CONSTRUCTION_AGE_BAND := as.factor(CONSTRUCTION_AGE_BAND)]  
+
+# create a density plot with relative cost of retrofit to construction age 
+costs_per_UPRN[ , per_cost := Cost/PRICE*100]
+ggplot(costs_per_UPRN, aes(x = per_cost, fill = Age_band)) +
+  geom_density(alpha = 0.5) +
+  labs(
+    title = "Density Plot of Average Retrofitting Costs by Property Type",
+    x = "Relative Cost of Retrofiting (%)",
+    y = "Density",
+    fill = "Property Type"
+  ) +
+  xlim(c(0,15))
+  theme_minimal()
+
+
+#normalise the distribution of price for each age band 
+costs_per_UPRN[, cost_mean_age := mean(Cost), by = Age_band]
+
+# To DO: instead of simple density plot, instead compare distributions (normalized) of prices per age band 
+
+
