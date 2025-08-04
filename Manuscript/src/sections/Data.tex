@@ -7,7 +7,7 @@ The first two datasets were consolidated and matched by unique property identifi
 Energy Performance Certificates (EPCs) were introduced in the UK on 1 August, 2007 by the Housing Act 2004 and EPBR 2007. \footnote{The Energy Performance of Buildings (Certificates and Inspections) (England and Wales) Regulations 2007}  Figure \ref{fig:EPC_example} below represents the energy efficiency from a typical certificate processed for this study . 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=1\linewidth]{image.png}
+    \includegraphics[width=1\linewidth]{src/figures/EPCertificate.png}
     \caption{Typical example of Energy Efficiency Rating reported in an EPC.}
     \label{fig:EPC_example}
 \end{figure}
@@ -18,7 +18,7 @@ The energy efficiency ratings of 15 million dwellings were extracted from Energy
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=1\textwidth]{Figures/Facet_costs.png} % Adjust width as needed
+    \includegraphics[width=1\textwidth]{src/figures/Facet_costs.png} % Adjust width as needed
     \caption{Average Yearly Costs by Improvement ID, extracted from EPC recommendations for all dwellings let, sold or retrofitted between 2008 - 2023}
     \label{fig:facet_price}
 \end{figure}
@@ -26,7 +26,7 @@ The energy efficiency ratings of 15 million dwellings were extracted from Energy
 \subsection{Price Paid Data and Listing Dataset} 
 The HM Land Registry's Price Paid data provides nearly a full record of all residential property sales in England and Wales since 1995.\footnote{\textit{HM Land Registry: Price Paid Data}. (2016). [Dataset]. \href{https://www.gov.uk/government/collections/price-paid-data}{https://www.gov.uk/government/collections/price-paid-data}} Transactions excluded from the Price Paid Data are homes not registered with the HM Land Registry and all unorthodox transfer of property rights (i.e., Deeds, 'Right to Buy' discounted properties, etc.). While previously only commercially available, the UK Land Registry data became accessible to the public as of 2013, making historical records of cash and mortgage transactions open data. For the purpose for this study, variables included the transaction prices, date, location (by postcode), property type, and UPRNs. In total 14.5 million transactions were extracted from the Price Paid data between 2007-23, of which 9.6 million consisted of unique addresses (or UPRNs). \\
 
-\input{Tables/price_by_epc&property_type}
+\input{src/tables/price_by_epc&property_type.tex}
 
 Transaction prices were adjusted for inflation using the Retail Price Index (RPI) for the sample period which was sourced from the Office of National Statistics (ONS) \footnote{https://www.ons.gov.uk/economy/inflationandpriceindices}. While the Consumer Price Index (CPI) has been the prevailing inflation index in the UK since 2003, after its inception in 1996 \cite{office_for_national_statistics_ons_consumer_2023},  both indicators rely on the overall change in price paid by households for the goods and services they consume \cite{jonhson_uk_2015}. However, they differ in the 'basket of goods (data) and formula used \cite{levell_comparing_2012}. As seen in Figure~\ref{fig:RPIvCPI} in Appendix, the RPI relies more heavily on housing expenditures (e.g., housing purchase costs, mortgage interest payments, building insurance, etc.) making it more sensitive to housing market conditions \cite{levell_comparing_2012}. This is especially relevant during the subprime mortgage crisis, as the RPI provided a significantly better representation of the turbulent housing prices therefore, the "real" transaction prices were adjusted from the RPI as of January 2019. Properties in the top 1\% of transaction prices were considered luxury goods and hence removed from the panel of observations since they are subject to distinct consumer behaviours \cite{allsopp_additional_2005} which may directly affect the willingness to pay for certain characteristics and services such as green labels \cite{fuerst_green_2016, hui_housing_2021, fuerst_energy_2016} hence affecting the underlying trends investigated here.  \\
 
@@ -36,7 +36,7 @@ Finally, access to rental and sales Zoopla property data from 2016-22 were grant
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.75\linewidth]{Figures/active_listings.png}
+    \includegraphics[width=0.75\linewidth]{src/figures/active_listings.png}
     \caption{Average monthly rental and sale active listings in UK and Wales.}
     \label{fig:active_listings}
 \end{figure}

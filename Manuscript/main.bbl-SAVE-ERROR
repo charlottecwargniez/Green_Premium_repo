@@ -1,0 +1,815 @@
+\begin{thebibliography}{100}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{office_for_national_statistics_age_2022}
+O.~for National~Statistics,
+  \href{https://www.ons.gov.uk/peoplepopulationandcommunity/housing/articles/ageofthepropertyisthebiggestsinglefactorinenergyefficiencyofhomes/2021-11-01}{Age
+  of the property is the biggest single factor in energy efficiency of homes}.
+\newline\urlprefix\url{https://www.ons.gov.uk/peoplepopulationandcommunity/housing/articles/ageofthepropertyisthebiggestsinglefactorinenergyefficiencyofhomes/2021-11-01}
+
+\bibitem{noauthor_make_nodate}
+\href{https://labour.org.uk/change/make-britain-a-clean-energy-superpower/}{Make
+  britain a clean energy superpower – the labour party}.
+\newline\urlprefix\url{https://labour.org.uk/change/make-britain-a-clean-energy-superpower/}
+
+\bibitem{scott_kings_2024}
+E.~Scott,
+  \href{https://lordslibrary.parliament.uk/research-briefings/lln-2024-0034/}{King’s
+  speech 2024: Energy security, net zero, environment and agriculture}.
+\newline\urlprefix\url{https://lordslibrary.parliament.uk/research-briefings/lln-2024-0034/}
+
+\bibitem{hope_attitudes_2014}
+A.~J. Hope, A.~Booth,
+  \href{https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=UA&KeyAID=10.1016%2Fj.enpol.2014.09.018&DestApp=DOI&SrcAppSID=EUW1ED0E4FNvsPPp5gfuReVuCuxlZ&SrcJTitle=ENERGY+POLICY&DestDOIRegistrantName=Elsevier}{Attitudes
+  and behaviours of private sector landlords towards the energy efficiency of
+  tenanted homes} 75  369--378, num Pages: 10 Place: Oxford Publisher: Elsevier
+  Sci Ltd Web of Science {ID}: {WOS}:000347604500038.
+\newblock \href {https://doi.org/10.1016/j.enpol.2014.09.018}
+  {\path{doi:10.1016/j.enpol.2014.09.018}}.
+\newline\urlprefix\url{https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=UA&KeyAID=10.1016%2Fj.enpol.2014.09.018&DestApp=DOI&SrcAppSID=EUW1ED0E4FNvsPPp5gfuReVuCuxlZ&SrcJTitle=ENERGY+POLICY&DestDOIRegistrantName=Elsevier}
+
+\bibitem{department_for_energy_security_and_net_zero_desnz_and_department_for_business_energy_and_industrial_strategy_beis_heat_2021}
+E.~a. I. S.~B. Department for Energy Security \{and\} Net Zero ({DESNZ})
+  \{and\} Department~for Business,
+  \href{https://www.gov.uk/government/publications/heat-and-buildings-strategy/heat-and-building-strategy-accessible-webpage}{Heat
+  and buildings strategy}.
+\newline\urlprefix\url{https://www.gov.uk/government/publications/heat-and-buildings-strategy/heat-and-building-strategy-accessible-webpage}
+
+\bibitem{rowe_housing_2024}
+G.~Rowe, F.~Rankl,
+  \href{https://researchbriefings.files.parliament.uk/documents/CBP-8830/CBP-8830.pdf}{Housing
+  and net zero}.
+\newline\urlprefix\url{https://researchbriefings.files.parliament.uk/documents/CBP-8830/CBP-8830.pdf}
+
+\bibitem{department_for_energy_security_and_net_zero_2023_2023}
+D.~for Energy Security \{and\} Net~Zero, 2023 {UK} greenhouse gas emissions,
+  provisional figures.
+
+\bibitem{alabid_review_2022}
+J.~Alabid, A.~Bennadji, M.~Seddiki,
+  \href{https://www.sciencedirect.com/science/article/pii/S1364032122000892}{A
+  review on the energy retrofit policies and improvements of the {UK} existing
+  buildings, challenges and benefits} 159  112161.
+\newblock \href {https://doi.org/10.1016/j.rser.2022.112161}
+  {\path{doi:10.1016/j.rser.2022.112161}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S1364032122000892}
+
+\bibitem{uk_green_building_council_ukgbc_retrofit_2021}
+U.~G. B.~C. ({UKGBC}),
+  \href{https://ukgbc.org/wp-content/uploads/2021/02/Retrofit-Playbook.pdf}{Retrofit
+  playbook}.
+\newline\urlprefix\url{https://ukgbc.org/wp-content/uploads/2021/02/Retrofit-Playbook.pdf}
+
+\bibitem{dauda_understanding_2022}
+J.~A. Dauda, S.~O. Ajayi,
+  \href{https://www.sciencedirect.com/science/article/pii/S2352710222011755}{Understanding
+  the impediments to sustainable structural retrofit of existing buildings in
+  the {UK}} 60  105168.
+\newblock \href {https://doi.org/10.1016/j.jobe.2022.105168}
+  {\path{doi:10.1016/j.jobe.2022.105168}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S2352710222011755}
+
+\bibitem{lowe_technical_2007}
+R.~Lowe,
+  \href{https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=UA&KeyAID=10.1080%2F09613210701238268&DestApp=DOI&SrcAppSID=EUW1ED0E4FNvsPPp5gfuReVuCuxlZ&SrcJTitle=BUILDING+RESEARCH+AND+INFORMATION&DestDOIRegistrantName=Informa+UK+%28Taylor+%26+Francis%29}{Technical
+  options and strategies for decarbonizing {UK} housing} 35~(4)  412--425, num
+  Pages: 14 Place: Abingdon Publisher: Routledge Journals, Taylor \& Francis
+  Ltd Web of Science {ID}: {WOS}:000247064400006.
+\newblock \href {https://doi.org/10.1080/09613210701238268}
+  {\path{doi:10.1080/09613210701238268}}.
+\newline\urlprefix\url{https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=UA&KeyAID=10.1080%2F09613210701238268&DestApp=DOI&SrcAppSID=EUW1ED0E4FNvsPPp5gfuReVuCuxlZ&SrcJTitle=BUILDING+RESEARCH+AND+INFORMATION&DestDOIRegistrantName=Informa+UK+%28Taylor+%26+Francis%29}
+
+\bibitem{chaves_building_2017}
+F.~Chaves, P.~Tzortzopoulos, C.~Formoso, C.~Biotto, Building information
+  modelling to cut disruption in housing retrofit 170~(6)  322--333.
+\newblock \href {https://doi.org/10.1680/jensu.16.00063}
+  {\path{doi:10.1680/jensu.16.00063}}.
+
+\bibitem{weatherall_property_2018}
+D.~Weatherall, F.~{McCarthy}, S.~Bright,
+  \href{https://doi.org/10.1007/s12053-017-9540-5}{Property law as a barrier to
+  energy upgrades in multi-owned properties: insights from a study of england
+  and scotland} 11~(7)  1641--1655.
+\newblock \href {https://doi.org/10.1007/s12053-017-9540-5}
+  {\path{doi:10.1007/s12053-017-9540-5}}.
+\newline\urlprefix\url{https://doi.org/10.1007/s12053-017-9540-5}
+
+\bibitem{bright_exploring_2019}
+S.~Bright, D.~Weatherall, R.~Willis,
+  \href{https://doi.org/10.1007/s12053-018-9676-y}{Exploring the complexities
+  of energy retrofit in mixed tenure social housing: a case study from england,
+  {UK}} 12~(1)  157--174.
+\newblock \href {https://doi.org/10.1007/s12053-018-9676-y}
+  {\path{doi:10.1007/s12053-018-9676-y}}.
+\newline\urlprefix\url{https://doi.org/10.1007/s12053-018-9676-y}
+
+\bibitem{warren_can_2024}
+L.~Warren, A.~Dawodu, A.~S. Adewumi, C.~Quan,
+  \href{https://www.mdpi.com/2071-1050/16/13/5820}{Can the {UK} deliver zero
+  carbon ready homes by 2050?} 16~(13)  5820, number: 13 Publisher:
+  Multidisciplinary Digital Publishing Institute.
+\newblock \href {https://doi.org/10.3390/su16135820}
+  {\path{doi:10.3390/su16135820}}.
+\newline\urlprefix\url{https://www.mdpi.com/2071-1050/16/13/5820}
+
+\bibitem{cassidy_how_2023}
+A.~Cassidy, \href{https://www.journals.uchicago.edu/doi/10.1086/722262}{How
+  does mandatory energy efficiency disclosure affect housing prices?} 10~(3)
+  655--686, publisher: The University of Chicago Press.
+\newblock \href {https://doi.org/10.1086/722262} {\path{doi:10.1086/722262}}.
+\newline\urlprefix\url{https://www.journals.uchicago.edu/doi/10.1086/722262}
+
+\bibitem{myers_mandatory_2022}
+E.~Myers, S.~L. Puller, J.~West,
+  \href{https://www.aeaweb.org/articles?id=10.1257/pol.20200539}{Mandatory
+  energy efficiency disclosure in housing markets} 14~(4)  453--487.
+\newblock \href {https://doi.org/10.1257/pol.20200539}
+  {\path{doi:10.1257/pol.20200539}}.
+\newline\urlprefix\url{https://www.aeaweb.org/articles?id=10.1257/pol.20200539}
+
+\bibitem{harrison_hedonic_1978}
+D.~Harrison, D.~L. Rubinfeld,
+  \href{https://www.sciencedirect.com/science/article/pii/0095069678900062}{Hedonic
+  housing prices and the demand for clean air} 5~(1)  81--102.
+\newblock \href {https://doi.org/10.1016/0095-0696(78)90006-2}
+  {\path{doi:10.1016/0095-0696(78)90006-2}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/0095069678900062}
+
+\bibitem{bisello_measuring_2020}
+A.~Bisello, V.~Antoniucci, G.~Marella,
+  \href{https://www.sciencedirect.com/science/article/pii/S0378778819326507}{Measuring
+  the price premium of energy efficiency: A two-step analysis in the italian
+  housing market} 208  109670.
+\newblock \href {https://doi.org/10.1016/j.enbuild.2019.109670}
+  {\path{doi:10.1016/j.enbuild.2019.109670}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0378778819326507}
+
+\bibitem{dalton_green_2018}
+B.~Dalton, F.~Fuerst, The ‘green value’ proposition in real estate: A
+  meta-analysis, in: The ‘Green Value’ Proposition in Real Estate: A
+  Meta-Analysis.
+
+\bibitem{ghosh_homebuyers_2024}
+A.~Ghosh, B.~{McConnell}, J.~Millán-Quijano,
+  \href{https://papers.ssrn.com/abstract=4527854}{Do homebuyers value energy
+  efficiency? evidence from an information shock}.
+\newblock \href {https://doi.org/10.2139/ssrn.4527854}
+  {\path{doi:10.2139/ssrn.4527854}}.
+\newline\urlprefix\url{https://papers.ssrn.com/abstract=4527854}
+
+\bibitem{fuerst_is_2020}
+F.~Fuerst, M.~F.~C. Haddad, H.~Adan,
+  \href{https://www.sciencedirect.com/science/article/pii/S0959652619335127}{Is
+  there an economic case for energy-efficient dwellings in the {UK} private
+  rental market?} 245  118642.
+\newblock \href {https://doi.org/10.1016/j.jclepro.2019.118642}
+  {\path{doi:10.1016/j.jclepro.2019.118642}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0959652619335127}
+
+\bibitem{kahn_capitalization_2014}
+M.~E. Kahn, N.~Kok,
+  \href{https://www.sciencedirect.com/science/article/pii/S0166046213000574}{The
+  capitalization of green labels in the california housing market} 47  25--34.
+\newblock \href {https://doi.org/10.1016/j.regsciurbeco.2013.07.001}
+  {\path{doi:10.1016/j.regsciurbeco.2013.07.001}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0166046213000574}
+
+\bibitem{bruegge_does_2016}
+C.~Bruegge, C.~Carrión-Flores, J.~C. Pope,
+  \href{https://www.sciencedirect.com/science/article/pii/S016604621500109X}{Does
+  the housing market value energy efficient homes? evidence from the energy
+  star program} 57  63--76.
+\newblock \href {https://doi.org/10.1016/j.regsciurbeco.2015.12.001}
+  {\path{doi:10.1016/j.regsciurbeco.2015.12.001}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S016604621500109X}
+
+\bibitem{galvin_rental_2023}
+R.~Galvin,
+  \href{https://www.sciencedirect.com/science/article/pii/S2214629623000695}{Rental
+  and sales price premiums for energy efficiency in germany's pre-war
+  apartments: Where are the shortfalls and what is society's role in bringing
+  fairness?} 98  103009.
+\newblock \href {https://doi.org/10.1016/j.erss.2023.103009}
+  {\path{doi:10.1016/j.erss.2023.103009}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S2214629623000695}
+
+\bibitem{sieger_inefficient_2023}
+L.~Sieger, C.~Weber,
+  \href{https://www.sciencedirect.com/science/article/pii/S0301421523004044}{Inefficient
+  markets for energy efficiency? – the efficiency premium puzzle in the
+  german rental housing market} 183  113819.
+\newblock \href {https://doi.org/10.1016/j.enpol.2023.113819}
+  {\path{doi:10.1016/j.enpol.2023.113819}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0301421523004044}
+
+\bibitem{aldridge_housing_2018}
+S.~Aldridge,
+  \href{https://www.cambridge.org/core/journals/national-institute-economic-review/article/abs/housing-market-challenges-and-policy-responses/4C7CEEFF0281A406CADBE917DFBE34C5}{The
+  housing market: challenges and policy responses} 245  R5--R8.
+\newblock \href {https://doi.org/10.1177/002795011824500110}
+  {\path{doi:10.1177/002795011824500110}}.
+\newline\urlprefix\url{https://www.cambridge.org/core/journals/national-institute-economic-review/article/abs/housing-market-challenges-and-policy-responses/4C7CEEFF0281A406CADBE917DFBE34C5}
+
+\bibitem{nazir_comparison_2020}
+F.~Nazir, D.~J. Edwards, M.~Shelbourn, I.~Martek, W.~D.~D. Thwala,
+  H.~El-Gohary, \href{https://doi.org/10.1108/JEDT-05-2020-0193}{Comparison of
+  modular and traditional {UK} housing construction: a bibliometric analysis}
+  19~(1)  164--186, publisher: Emerald Publishing Limited.
+\newblock \href {https://doi.org/10.1108/JEDT-05-2020-0193}
+  {\path{doi:10.1108/JEDT-05-2020-0193}}.
+\newline\urlprefix\url{https://doi.org/10.1108/JEDT-05-2020-0193}
+
+\bibitem{green_policies_2017}
+A.~Green, \href{https://doi.org/10.1007/978-3-319-58547-5_7}{Policies for
+  intergenerational equity two: Housing}, in: A.~Green (Ed.), The Crisis for
+  Young People: Generational Inequalities in Education, Work, Housing and
+  Welfare, Springer International Publishing, pp. 109--120.
+\newblock \href {https://doi.org/10.1007/978-3-319-58547-5_7}
+  {\path{doi:10.1007/978-3-319-58547-5_7}}.
+\newline\urlprefix\url{https://doi.org/10.1007/978-3-319-58547-5_7}
+
+\bibitem{schwartz_covid-19s_2023}
+A.~E. Schwartz, S.~Wachter,
+  \href{https://www.sciencedirect.com/science/article/pii/S1051137722000833}{{COVID}-19’s
+  impacts on housing markets: Introduction} 59  101911.
+\newblock \href {https://doi.org/10.1016/j.jhe.2022.101911}
+  {\path{doi:10.1016/j.jhe.2022.101911}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S1051137722000833}
+
+\bibitem{murphy_housing_2024}
+M.~Murphy, E.~M.~D. Grundy,
+  \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10795505/}{Housing tenure
+  and disability in the {UK}: trends and projections 2004–2030} 11  1248909.
+\newblock \href {https://doi.org/10.3389/fpubh.2023.1248909}
+  {\path{doi:10.3389/fpubh.2023.1248909}}.
+\newline\urlprefix\url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10795505/}
+
+\bibitem{bone_neoliberal_2014}
+J.~Bone, \href{https://doi.org/10.5153/sro.3491}{Neoliberal nomads: Housing
+  insecurity and the revival of private renting in the {UK}} 19~(4)  1--14,
+  publisher: {SAGE} Publications Ltd.
+\newblock \href {https://doi.org/10.5153/sro.3491}
+  {\path{doi:10.5153/sro.3491}}.
+\newline\urlprefix\url{https://doi.org/10.5153/sro.3491}
+
+\bibitem{banks_house_2010}
+J.~Banks, R.~Blundell, Z.~Oldfield, J.~Smith, House price volatility and the
+  housing ladder\href {https://doi.org/10.2139/ssrn.1680657}
+  {\path{doi:10.2139/ssrn.1680657}}.
+
+\bibitem{mckee_generation_2020}
+K.~{McKee}, A.~M. Soaita, J.~Hoolachan,
+  \href{https://doi.org/10.1080/02673037.2019.1676400}{‘generation rent’
+  and the emotions of private renting: self-worth, status and insecurity
+  amongst low-income renters} 35~(8)  1468--1487, publisher: Routledge
+  \_eprint: https://doi.org/10.1080/02673037.2019.1676400.
+\newblock \href {https://doi.org/10.1080/02673037.2019.1676400}
+  {\path{doi:10.1080/02673037.2019.1676400}}.
+\newline\urlprefix\url{https://doi.org/10.1080/02673037.2019.1676400}
+
+\bibitem{howard_seven_2024}
+A.~Howard, \href{https://doi.org/10.1080/14036096.2024.2319758}{Seven
+  propositions about ‘generation rent’} 0~(0)  1--22, publisher: Routledge
+  \_eprint: https://doi.org/10.1080/14036096.2024.2319758.
+\newblock \href {https://doi.org/10.1080/14036096.2024.2319758}
+  {\path{doi:10.1080/14036096.2024.2319758}}.
+\newline\urlprefix\url{https://doi.org/10.1080/14036096.2024.2319758}
+
+\bibitem{sabater_age_2023}
+A.~Sabater, N.~Finney, \href{https://doi.org/10.1177/00420980221121088}{Age
+  segregation and housing unaffordability: Generational divides in housing
+  opportunities and spatial polarisation in england and wales} 60~(5)
+  941--961, publisher: {SAGE} Publications Ltd.
+\newblock \href {https://doi.org/10.1177/00420980221121088}
+  {\path{doi:10.1177/00420980221121088}}.
+\newline\urlprefix\url{https://doi.org/10.1177/00420980221121088}
+
+\bibitem{field_reappraising_2014}
+M.~Field, \href{https://doi.org/10.1177/0269094214535557}{Reappraising the
+  place for private rental housing in the {UK} market: Why an unbalanced
+  economy is at risk of becoming even worse…} 29~(4)  354--362, publisher:
+  {SAGE} Publications Ltd.
+\newblock \href {https://doi.org/10.1177/0269094214535557}
+  {\path{doi:10.1177/0269094214535557}}.
+\newline\urlprefix\url{https://doi.org/10.1177/0269094214535557}
+
+\bibitem{bailey_poverty_2020}
+N.~Bailey, \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001905/}{Poverty
+  and the re-growth of private renting in the {UK}, 1994-2018} 15~(2)
+  e0228273.
+\newblock \href {https://doi.org/10.1371/journal.pone.0228273}
+  {\path{doi:10.1371/journal.pone.0228273}}.
+\newline\urlprefix\url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001905/}
+
+\bibitem{department_for_levelling_up_housing_and_communities_dluhc_english_2022}
+H.~a. C.~D. Department~for Levelling~Up,
+  \href{https://www.gov.uk/government/statistics/english-housing-survey-2021-to-2022-private-rented-sector/english-housing-survey-2021-to-2022-private-rented-sector}{English
+  housing survey 2021 to 2022: Private rented sector report}.
+\newline\urlprefix\url{https://www.gov.uk/government/statistics/english-housing-survey-2021-to-2022-private-rented-sector/english-housing-survey-2021-to-2022-private-rented-sector}
+
+\bibitem{department_for_business_energy__industrial_strategy_dbeis_energy_2022}
+E.~{\textbackslash}. I. S.~D. Department~for Business,
+  \href{https://www.gov.uk/government/statistics/energy-consumption-in-the-uk-2022}{Energy
+  consumption in the {UK} 2022}.
+\newline\urlprefix\url{https://www.gov.uk/government/statistics/energy-consumption-in-the-uk-2022}
+
+\bibitem{palmer_united_2014}
+J.~Palmer, I.~Cooper, United Kingdom housing energy fact file.
+
+\bibitem{ejidike_global_2023}
+C.~Ejidike, M.~Mewomo, T.~O. Olawumi, Global trend in retrofitting using smart
+  technology: A scientometric review, in: C.~Aigbavboa, W.~Thwala, D.~Aghimien
+  (Eds.), Towards a Sustainable Construction Industry: The Role of Innovation
+  and Digitalisation, Springer International Publishing, pp. 153--165.
+\newblock \href {https://doi.org/10.1007/978-3-031-22434-8_16}
+  {\path{doi:10.1007/978-3-031-22434-8_16}}.
+
+\bibitem{kesicki_costs_2012}
+F.~Kesicki,
+  \href{https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=UA&KeyAID=10.1016%2Fj.enbuild.2012.05.013&DestApp=DOI&SrcAppSID=EUW1ED0E4FNvsPPp5gfuReVuCuxlZ&SrcJTitle=ENERGY+AND+BUILDINGS&DestDOIRegistrantName=Elsevier}{Costs
+  and potentials of reducing {CO}$_{\textrm{2}}$ emissions in the {UK} domestic
+  stock from a systems perspective} 51  203--211, num Pages: 9 Place: Lausanne
+  Publisher: Elsevier Science Sa Web of Science {ID}: {WOS}:000308056700024.
+\newblock \href {https://doi.org/10.1016/j.enbuild.2012.05.013}
+  {\path{doi:10.1016/j.enbuild.2012.05.013}}.
+\newline\urlprefix\url{https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=UA&KeyAID=10.1016%2Fj.enbuild.2012.05.013&DestApp=DOI&SrcAppSID=EUW1ED0E4FNvsPPp5gfuReVuCuxlZ&SrcJTitle=ENERGY+AND+BUILDINGS&DestDOIRegistrantName=Elsevier}
+
+\bibitem{royapoor_towards_2023}
+M.~Royapoor, A.~Allahham, S.~H.~R. Hosseini, N.~A. Rufa’I, S.~L. Walker,
+  \href{https://doi.org/10.1080/15567249.2023.2272264}{Towards 2050 net zero
+  carbon infrastructure: a critical review of key decarbonization challenges in
+  the domestic heating sector in the {UK}} 18~(1)  2272264, publisher: Taylor
+  \& Francis \_eprint: https://doi.org/10.1080/15567249.2023.2272264.
+\newblock \href {https://doi.org/10.1080/15567249.2023.2272264}
+  {\path{doi:10.1080/15567249.2023.2272264}}.
+\newline\urlprefix\url{https://doi.org/10.1080/15567249.2023.2272264}
+
+\bibitem{miu_simple_2018}
+L.~M. Miu, N.~Wisniewska, C.~Mazur, J.~Hardy, A.~Hawkes,
+  \href{https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=UA&KeyAID=10.3390%2Fen11082070&DestApp=DOI&SrcAppSID=EUW1ED0E4FNvsPPp5gfuReVuCuxlZ&SrcJTitle=ENERGIES&DestDOIRegistrantName=MDPI+AG}{A
+  simple assessment of housing retrofit policies for the {UK}: What should
+  succeed the energy company obligation?} 11~(8)  2070, num Pages: 22 Place:
+  Basel Publisher: {MDPI} Web of Science {ID}: {WOS}:000446604100149.
+\newblock \href {https://doi.org/10.3390/en11082070}
+  {\path{doi:10.3390/en11082070}}.
+\newline\urlprefix\url{https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=UA&KeyAID=10.3390%2Fen11082070&DestApp=DOI&SrcAppSID=EUW1ED0E4FNvsPPp5gfuReVuCuxlZ&SrcJTitle=ENERGIES&DestDOIRegistrantName=MDPI+AG}
+
+\bibitem{wang_innovative_2022}
+Y.~Wang, K.~Qu, X.~Chen, G.~Gan, S.~Riffat,
+  \href{https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=UA&KeyAID=10.1016%2Fj.enbuild.2022.111834&DestApp=DOI&SrcAppSID=EUW1ED0E4FNvsPPp5gfuReVuCuxlZ&SrcJTitle=ENERGY+AND+BUILDINGS&DestDOIRegistrantName=Elsevier}{An
+  innovative retrofit motivation-objective-criteria ({MOC}) approach
+  integrating homeowners' engagement to unlocking low-energy retrofit in
+  residential buildings} 259  111834, num Pages: 17 Place: Lausanne Publisher:
+  Elsevier Science Sa Web of Science {ID}: {WOS}:000792900000005.
+\newblock \href {https://doi.org/10.1016/j.enbuild.2022.111834}
+  {\path{doi:10.1016/j.enbuild.2022.111834}}.
+\newline\urlprefix\url{https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=UA&KeyAID=10.1016%2Fj.enbuild.2022.111834&DestApp=DOI&SrcAppSID=EUW1ED0E4FNvsPPp5gfuReVuCuxlZ&SrcJTitle=ENERGY+AND+BUILDINGS&DestDOIRegistrantName=Elsevier}
+
+\bibitem{de_cian_households_2019}
+E.~De~Cian, F.~Pavanello, T.~Randazzo, M.~N. Mistry, M.~Davide,
+  \href{https://researchonline.lshtm.ac.uk/id/eprint/4661907/?utm_source=chatgpt.com}{Households’
+  adaptation in a warming climate. air conditioning and thermal insulation
+  choices} 100  136--157, publisher: Elsevier.
+\newline\urlprefix\url{https://researchonline.lshtm.ac.uk/id/eprint/4661907/?utm_source=chatgpt.com}
+
+\bibitem{poritt_scopus_2012}
+S.~Poritt, P.~Cropper, L.~Shao, C.~Goodier,
+  \href{https://www-scopus-com.ezproxy-prd.bodleian.ox.ac.uk/record/display.uri?eid=2-s2.0-84870624539&origin=resultslist&sort=plf-f&src=s&sid=ca61a254fb1fc11d8adefcabd9c41d3f&sot=b&sdt=b&s=TITLE-ABS-KEY%28cost+effectiveness+AND+energy+retrofit+AND+houses+AND+UK%29&sl=71&sessionSearchId=ca61a254fb1fc11d8adefcabd9c41d3f&relpos=4}{Scopus
+  - document details - ranking of interventions to reduce dwelling overheating
+  during heat waves}.
+\newline\urlprefix\url{https://www-scopus-com.ezproxy-prd.bodleian.ox.ac.uk/record/display.uri?eid=2-s2.0-84870624539&origin=resultslist&sort=plf-f&src=s&sid=ca61a254fb1fc11d8adefcabd9c41d3f&sot=b&sdt=b&s=TITLE-ABS-KEY%28cost+effectiveness+AND+energy+retrofit+AND+houses+AND+UK%29&sl=71&sessionSearchId=ca61a254fb1fc11d8adefcabd9c41d3f&relpos=4}
+
+\bibitem{joint_research_centre________________________________________european_commission_building_2020}
+{Joint Research Centre (European Commission)}, P.~Zangheri, R.~Armani,
+  G.~Kakoulaki, M.~Bavetta, G.~Martirano, F.~Pignatelli, C.~Baranzelli,
+  \href{https://data.europa.eu/doi/10.2760/08629}{Building energy renovation
+  for decarbonisation and Covid-19 recovery: a snapshot at regional level},
+  Publications Office of the European Union.
+\newline\urlprefix\url{https://data.europa.eu/doi/10.2760/08629}
+
+\bibitem{taltavull_de_la_paz_green_2019}
+P.~Taltavull~de La~Paz, V.~R. Perez-Sanchez, R.-T. Mora-Garcia, J.-C.
+  Perez-Sanchez, \href{https://www.mdpi.com/2071-1050/11/3/686}{Green premium
+  evidence from climatic areas: A case in southern europe, alicante (spain)}
+  11~(3)  686, number: 3 Publisher: Multidisciplinary Digital Publishing
+  Institute.
+\newblock \href {https://doi.org/10.3390/su11030686}
+  {\path{doi:10.3390/su11030686}}.
+\newline\urlprefix\url{https://www.mdpi.com/2071-1050/11/3/686}
+
+\bibitem{wilhelmsson_how_2023}
+M.~Wilhelmsson, How does the presentation of energy performance affect the
+  price of houses? a case study of detached houses in stockholm, sweden 13
+  1367.
+\newblock \href {https://doi.org/10.3390/buildings13061367}
+  {\path{doi:10.3390/buildings13061367}}.
+
+\bibitem{galassi_role_2017}
+V.~Galassi, R.~Madlener, The role of environmental concern and comfort
+  expectations in energy retrofit decisions 141  53--65.
+\newblock \href {https://doi.org/10.1016/j.ecolecon.2017.05.021}
+  {\path{doi:10.1016/j.ecolecon.2017.05.021}}.
+
+\bibitem{ud_din_assessing_2023}
+S.~Ud~Din, R.~Wimalasiri, M.~Ehsan, X.~Liang, F.~Ning, D.~Guo, Z.~Manzoor,
+  T.~Abu-Alam, M.~Abioui,
+  \href{https://www.frontiersin.org/journals/energy-research/articles/10.3389/fenrg.2023.1088297/full}{Assessing
+  public perception and willingness to pay for renewable energy in pakistan
+  through the theory of planned behavior} 11, publisher: Frontiers.
+\newblock \href {https://doi.org/10.3389/fenrg.2023.1088297}
+  {\path{doi:10.3389/fenrg.2023.1088297}}.
+\newline\urlprefix\url{https://www.frontiersin.org/journals/energy-research/articles/10.3389/fenrg.2023.1088297/full}
+
+\bibitem{wilson_why_2015}
+C.~Wilson, L.~Crane, G.~Chryssochoidis,
+  \href{https://www.sciencedirect.com/science/article/pii/S2214629615000298}{Why
+  do homeowners renovate energy efficiently? contrasting perspectives and
+  implications for policy} 7  12--22.
+\newblock \href {https://doi.org/10.1016/j.erss.2015.03.002}
+  {\path{doi:10.1016/j.erss.2015.03.002}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S2214629615000298}
+
+\bibitem{wang_holistic_2022}
+Y.~Wang, K.~Qu, X.~Chen, X.~Zhang, S.~Riffat, Holistic electrification vs deep
+  energy retrofits for optimal decarbonisation pathways of {UK} dwellings: A
+  case study of the 1940s’ british post-war masonry house 241.
+\newblock \href {https://doi.org/10.1016/j.energy.2021.122935}
+  {\path{doi:10.1016/j.energy.2021.122935}}.
+
+\bibitem{pelenur_motivations_2014}
+M.~J. Pelenur, H.~J. Cruickshank,
+  \href{https://www.icevirtuallibrary.com/doi/10.1680/ener.14.00013}{Motivations
+  to adopting energy efficiency measures in the home} 167~(3)  103--116,
+  publisher: {ICE} Publishing.
+\newblock \href {https://doi.org/10.1680/ener.14.00013}
+  {\path{doi:10.1680/ener.14.00013}}.
+\newline\urlprefix\url{https://www.icevirtuallibrary.com/doi/10.1680/ener.14.00013}
+
+\bibitem{urban_big_data_centre_price_2023}
+U.~B.~D. Centre,
+  \href{https://data.ubdc.ac.uk/datasets/price-paid-data-to-uprn-lookup}{Price
+  paid data to {UPRN} lookup}, publisher: University of Glasgow.
+\newblock \href {https://doi.org/10.20394/agu7hprj}
+  {\path{doi:10.20394/agu7hprj}}.
+\newline\urlprefix\url{https://data.ubdc.ac.uk/datasets/price-paid-data-to-uprn-lookup}
+
+\bibitem{kelly_building_2012}
+S.~Kelly, D.~Crawford-Brown, M.~G. Pollitt,
+  \href{https://www.sciencedirect.com/science/article/pii/S1364032112004595}{Building
+  performance evaluation and certification in the {UK}: Is {SAP} fit for
+  purpose?} 16~(9)  6861--6878.
+\newblock \href {https://doi.org/10.1016/j.rser.2012.07.018}
+  {\path{doi:10.1016/j.rser.2012.07.018}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S1364032112004595}
+
+\bibitem{department_for_communities_and_local_government_guide_2017}
+D.~for Communities \{and\} Local~Government, A guide to energy performance
+  certificates for the marketing, sale and let of dwellings.
+
+\bibitem{bre_group_standard_nodate}
+B.~Group,
+  \href{https://bregroup.com/expertise/energy/sap/standard-assessment-procedure-2012}{Standard
+  assessment procedure ({SAP}) 2012}.
+\newline\urlprefix\url{https://bregroup.com/expertise/energy/sap/standard-assessment-procedure-2012}
+
+\bibitem{bolton_energy_2024}
+P.~Bolton,
+  \href{https://commonslibrary.parliament.uk/research-briefings/cbp-9889/}{Energy
+  efficiency of {UK} homes}.
+\newline\urlprefix\url{https://commonslibrary.parliament.uk/research-briefings/cbp-9889/}
+
+\bibitem{stone_key_2014}
+A.~Stone, D.~Shipworth, P.~Biddulph, T.~Oreszczyn,
+  \href{https://doi.org/10.1080/09613218.2014.905383}{Key factors determining
+  the energy rating of existing english houses} 42~(6)  725--738, publisher:
+  Routledge \_eprint: https://doi.org/10.1080/09613218.2014.905383.
+\newblock \href {https://doi.org/10.1080/09613218.2014.905383}
+  {\path{doi:10.1080/09613218.2014.905383}}.
+\newline\urlprefix\url{https://doi.org/10.1080/09613218.2014.905383}
+
+\bibitem{few_over-prediction_2023}
+J.~Few, D.~Manouseli, E.~{McKenna}, M.~Pullinger, E.~Zapata-Webborn, S.~Elam,
+  D.~Shipworth, T.~Oreszczyn,
+  \href{https://www.sciencedirect.com/science/article/pii/S0378778823002542}{The
+  over-prediction of energy use by {EPCs} in great britain: A comparison of
+  {EPC}-modelled and metered primary energy use intensity} 288  113024.
+\newblock \href {https://doi.org/10.1016/j.enbuild.2023.113024}
+  {\path{doi:10.1016/j.enbuild.2023.113024}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0378778823002542}
+
+\bibitem{crawley_quantifying_2019}
+J.~Crawley, P.~Biddulph, P.~J. Northrop, J.~Wingfield, T.~Oreszczyn, C.~Elwell,
+  \href{https://www.mdpi.com/1996-1073/12/18/3523}{Quantifying the measurement
+  error on england and wales {EPC} ratings} 12~(18)  3523, number: 18
+  Publisher: Multidisciplinary Digital Publishing Institute.
+\newblock \href {https://doi.org/10.3390/en12183523}
+  {\path{doi:10.3390/en12183523}}.
+\newline\urlprefix\url{https://www.mdpi.com/1996-1073/12/18/3523}
+
+\bibitem{banerjee_eco-labeling_2003}
+A.~Banerjee, B.~D. Solomon,
+  \href{https://www.sciencedirect.com/science/article/pii/S0301421502000125}{Eco-labeling
+  for energy efficiency and sustainability: a meta-evaluation of {US} programs}
+  31~(2)  109--123.
+\newblock \href {https://doi.org/10.1016/S0301-4215(02)00012-5}
+  {\path{doi:10.1016/S0301-4215(02)00012-5}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0301421502000125}
+
+\bibitem{mutter_increasing_2012}
+A.~Mutter, L.~Sterk,
+  \href{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=8e7864ec7b47b4efe83f937104cc65cc9e536a5e#page=36}{Increasing
+  consumer awareness in energy-efficient housing}  33Publisher: Citeseer.
+\newline\urlprefix\url{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=8e7864ec7b47b4efe83f937104cc65cc9e536a5e#page=36}
+
+\bibitem{martiskainen_role_2019}
+M.~Martiskainen, P.~Kivimaa,
+  \href{https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=UA&KeyAID=10.1016%2Fj.jclepro.2019.01.104&DestApp=DOI&SrcAppSID=EUW1ED0E4FNvsPPp5gfuReVuCuxlZ&SrcJTitle=JOURNAL+OF+CLEANER+PRODUCTION&DestDOIRegistrantName=Elsevier}{Role
+  of knowledge and policies as drivers for low-energy housing: Case studies
+  from the united kingdom} 215  1402--1414, num Pages: 13 Place: Oxford
+  Publisher: Elsevier Sci Ltd Web of Science {ID}: {WOS}:000459358300117.
+\newblock \href {https://doi.org/10.1016/j.jclepro.2019.01.104}
+  {\path{doi:10.1016/j.jclepro.2019.01.104}}.
+\newline\urlprefix\url{https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=UA&KeyAID=10.1016%2Fj.jclepro.2019.01.104&DestApp=DOI&SrcAppSID=EUW1ED0E4FNvsPPp5gfuReVuCuxlZ&SrcJTitle=JOURNAL+OF+CLEANER+PRODUCTION&DestDOIRegistrantName=Elsevier}
+
+\bibitem{department_for_energy_security_and_net_zero_and_department_for_business_energy__industrial_strategy_standard_2013}
+E.~{\textbackslash}. I.~S. Department for Energy Security \{and\} Net Zero
+  \{and\} Department~for Business,
+  \href{https://www.gov.uk/guidance/standard-assessment-procedure}{Standard
+  assessment procedure: 2013 edition}.
+\newline\urlprefix\url{https://www.gov.uk/guidance/standard-assessment-procedure}
+
+\bibitem{department_for_energy_security_and_net_zero_and_department_for_business_energy__industrial_strategy_standard_2023}
+E.~{\textbackslash}. I.~S. Department for Energy Security \{and\} Net Zero
+  \{and\} Department~for Business,
+  \href{https://www.gov.uk/guidance/standard-assessment-procedure}{Standard
+  assessment procedure: 2023 edition}.
+\newline\urlprefix\url{https://www.gov.uk/guidance/standard-assessment-procedure}
+
+\bibitem{office_for_national_statistics_ons_consumer_2023}
+O.~for National Statistics~({ONS}),
+  \href{https://www.ons.gov.uk/economy/inflationandpriceindices/methodologies/consumerpriceinflationincludesall3indicescpihcpiandrpiqmi}{Consumer
+  price inflation (includes all 3 indices – {CPIH}, {CPI}, and {RPI}) –
+  quality and methodology information}.
+\newline\urlprefix\url{https://www.ons.gov.uk/economy/inflationandpriceindices/methodologies/consumerpriceinflationincludesall3indicescpihcpiandrpiqmi}
+
+\bibitem{jonhson_uk_2015}
+P.~Jonhson,
+  \href{https://uksa.statisticsauthority.gov.uk/wp-content/uploads/2015/12/images-ukconsumerpricestatisticsarevie_tcm97-44345.pdf}{{UK}
+  consumer price statistics: A review}.
+\newline\urlprefix\url{https://uksa.statisticsauthority.gov.uk/wp-content/uploads/2015/12/images-ukconsumerpricestatisticsarevie_tcm97-44345.pdf}
+
+\bibitem{levell_comparing_2012}
+P.~Levell, T.~Skingle,
+  \href{https://www.econstor.eu/handle/10419/91535}{Comparing household
+  inflation experiences measured by the {CPI} and {RPI}}.
+\newblock \href {https://doi.org/10.1920/wp.ifs.2012.1221}
+  {\path{doi:10.1920/wp.ifs.2012.1221}}.
+\newline\urlprefix\url{https://www.econstor.eu/handle/10419/91535}
+
+\bibitem{allsopp_additional_2005}
+J.~Allsopp, \href{https://doi.org/10.1057/palgrave.rpm.5170138}{Additional
+  practice papers: Premium pricing: Understanding the value of premium} 4~(2)
+  185--194.
+\newblock \href {https://doi.org/10.1057/palgrave.rpm.5170138}
+  {\path{doi:10.1057/palgrave.rpm.5170138}}.
+\newline\urlprefix\url{https://doi.org/10.1057/palgrave.rpm.5170138}
+
+\bibitem{fuerst_green_2016}
+F.~Fuerst, C.~Shimizu,
+  \href{https://www.sciencedirect.com/science/article/pii/S0889158316000046}{Green
+  luxury goods? the economics of eco-labels in the japanese housing market} 39
+  108--122.
+\newblock \href {https://doi.org/10.1016/j.jjie.2016.01.003}
+  {\path{doi:10.1016/j.jjie.2016.01.003}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0889158316000046}
+
+\bibitem{hui_housing_2021}
+E.~C.-m. Hui, K.-h. Yu,
+  \href{https://www.sciencedirect.com/science/article/pii/S0197397521000394}{Housing
+  market segmentation and the price effect of certified green residential
+  properties} 111  102350.
+\newblock \href {https://doi.org/10.1016/j.habitatint.2021.102350}
+  {\path{doi:10.1016/j.habitatint.2021.102350}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0197397521000394}
+
+\bibitem{fuerst_energy_2016}
+F.~Fuerst, P.~{McAllister}, A.~Nanda, P.~Wyatt,
+  \href{https://www.sciencedirect.com/science/article/pii/S0301421516300258}{Energy
+  performance ratings and house prices in wales: An empirical study} 92
+  20--33.
+\newblock \href {https://doi.org/10.1016/j.enpol.2016.01.024}
+  {\path{doi:10.1016/j.enpol.2016.01.024}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0301421516300258}
+
+\bibitem{jones_retrofitting_2013}
+P.~Jones, S.~Lannon, J.~Patterson,
+  \href{https://doi.org/10.1080/09613218.2013.807064}{Retrofitting existing
+  housing: how far, how much?} 41~(5)  532--550, publisher: Routledge \_eprint:
+  https://doi.org/10.1080/09613218.2013.807064.
+\newblock \href {https://doi.org/10.1080/09613218.2013.807064}
+  {\path{doi:10.1080/09613218.2013.807064}}.
+\newline\urlprefix\url{https://doi.org/10.1080/09613218.2013.807064}
+
+\bibitem{billio_learning_2024}
+M.~Billio, R.~Casarin, M.~Costola, V.~Veggente,
+  \href{https://www.sciencedirect.com/science/article/pii/S014098832400358X}{Learning
+  from experts: Energy efficiency in residential buildings} 136  107650.
+\newblock \href {https://doi.org/10.1016/j.eneco.2024.107650}
+  {\path{doi:10.1016/j.eneco.2024.107650}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S014098832400358X}
+
+\bibitem{wilms_omitted_2021}
+R.~Wilms, E.~Mäthner, L.~Winnen, R.~Lanwehr,
+  \href{https://www.sciencedirect.com/science/article/pii/S2590260121000321}{Omitted
+  variable bias: A threat to estimating causal relationships} 5  100075.
+\newblock \href {https://doi.org/10.1016/j.metip.2021.100075}
+  {\path{doi:10.1016/j.metip.2021.100075}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S2590260121000321}
+
+\bibitem{hamilton_energy_2013}
+I.~G. Hamilton, P.~J. Steadman, H.~Bruhns, A.~J. Summerfield, R.~Lowe,
+  \href{https://www.sciencedirect.com/science/article/pii/S0301421513002413}{Energy
+  efficiency in the british housing stock: Energy demand and the homes energy
+  efficiency database} 60  462--480.
+\newblock \href {https://doi.org/10.1016/j.enpol.2013.04.004}
+  {\path{doi:10.1016/j.enpol.2013.04.004}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0301421513002413}
+
+\bibitem{bergman_reframing_2020}
+N.~Bergman, T.~J. Foxon,
+  \href{https://www.sciencedirect.com/science/article/pii/S2214629618311733}{Reframing
+  policy for the energy efficiency challenge: Insights from housing retrofits
+  in the united kingdom} 63  101386.
+\newblock \href {https://doi.org/10.1016/j.erss.2019.101386}
+  {\path{doi:10.1016/j.erss.2019.101386}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S2214629618311733}
+
+\bibitem{berge_efficient_2018}
+L.~Bergé, \href{https://ideas.repec.org//p/luc/wpaper/18-13.html}{Efficient
+  estimation of maximum likelihood models with multiple fixed-effects: the r
+  package {FENmlm}}Number: 18-13 Publisher: Department of Economics at the
+  University of Luxembourg.
+\newline\urlprefix\url{https://ideas.repec.org//p/luc/wpaper/18-13.html}
+
+\bibitem{malpezzi_long-run_2001}
+S.~Malpezzi, D.~Maclennan,
+  \href{https://www.sciencedirect.com/science/article/pii/S1051137701902888}{The
+  long-run price elasticity of supply of new residential construction in the
+  united states and the united kingdom} 10~(3)  278--306.
+\newblock \href {https://doi.org/10.1006/jhec.2001.0288}
+  {\path{doi:10.1006/jhec.2001.0288}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S1051137701902888}
+
+\bibitem{fibich_dynamics_2005}
+G.~Fibich, A.~Gavious, O.~Lowengart,
+  \href{https://doi.org/10.1177/0092070304267108}{The dynamics of price
+  elasticity of demand in the presence of reference price effects} 33~(1)
+  66--78.
+\newblock \href {https://doi.org/10.1177/0092070304267108}
+  {\path{doi:10.1177/0092070304267108}}.
+\newline\urlprefix\url{https://doi.org/10.1177/0092070304267108}
+
+\bibitem{fingleton_housing_2019}
+B.~Fingleton, F.~Fuerst, N.~Szumilo,
+  \href{https://doi.org/10.1177/0308518X18798372}{Housing affordability: Is new
+  local supply the key?} 51~(1)  25--50, publisher: {SAGE} Publications Ltd.
+\newblock \href {https://doi.org/10.1177/0308518X18798372}
+  {\path{doi:10.1177/0308518X18798372}}.
+\newline\urlprefix\url{https://doi.org/10.1177/0308518X18798372}
+
+\bibitem{department_for_business_energy_and_industrial_strategy_english_2023}
+E.~a. I.~S. Department~for Business,
+  \href{https://www.gov.uk/government/statistics/english-housing-survey-2022-to-2023-energy/english-housing-survey-2022-to-2023-energy-report}{English
+  housing survey 2022 to 2023: Energy report}.
+\newline\urlprefix\url{https://www.gov.uk/government/statistics/english-housing-survey-2022-to-2023-energy/english-housing-survey-2022-to-2023-energy-report}
+
+\bibitem{department_for_business_energy_and_industrial_strategy_household_2020}
+E.~a. I.~S. Department~for Business,
+  \href{https://www.gov.uk/government/statistics/household-energy-efficiency-statistics-detailed-report-2019}{Household
+  energy efficiency statistics}.
+\newline\urlprefix\url{https://www.gov.uk/government/statistics/household-energy-efficiency-statistics-detailed-report-2019}
+
+\bibitem{office_for_national_statistics_energy_2023}
+O.~for National~Statistics,
+  \href{https://www.ons.gov.uk/peoplepopulationandcommunity/housing/articles/energyefficiencyofhousinginenglandandwales/2023}{Energy
+  efficiency of housing in england and wales - 2023}.
+\newline\urlprefix\url{https://www.ons.gov.uk/peoplepopulationandcommunity/housing/articles/energyefficiencyofhousinginenglandandwales/2023}
+
+\bibitem{climate_change_committee_ccc_2022_2022}
+C.~C.~C. ({CCC}),
+  \href{https://www.theccc.org.uk/publication/2022-progress-report-to-parliament/}{2022
+  progress report to parliament}.
+\newline\urlprefix\url{https://www.theccc.org.uk/publication/2022-progress-report-to-parliament/}
+
+\bibitem{lafond_how_2018}
+F.~Lafond, A.~G. Bailey, J.~D. Bakker, D.~Rebois, R.~Zadourian, P.~{McSharry},
+  J.~D. Farmer,
+  \href{https://www.sciencedirect.com/science/article/pii/S0040162517303736}{How
+  well do experience curves predict technological progress? a method for making
+  distributional forecasts} 128  104--117.
+\newblock \href {https://doi.org/10.1016/j.techfore.2017.11.001}
+  {\path{doi:10.1016/j.techfore.2017.11.001}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0040162517303736}
+
+\bibitem{zhou_learning_2019}
+D.~Zhou, H.~Ding, P.~Zhou, Q.~Wang, Learning curve with input price for
+  tracking technical change in the energy transition process 235  997--1005.
+\newblock \href {https://doi.org/10.1016/j.jclepro.2019.07.023}
+  {\path{doi:10.1016/j.jclepro.2019.07.023}}.
+
+\bibitem{bosetti_witch_2006}
+V.~Bosetti, C.~Carraro, M.~Galeotti, E.~Massetti, M.~Tavoni, {WITCH}: A world
+  induced technical change hybrid model 27  13--37.
+
+\bibitem{hamilton_uptake_2014}
+I.~G. Hamilton, D.~Shipworth, A.~J. Summerfield, P.~Steadman, T.~Oreszczyn,
+  R.~Lowe, \href{https://doi.org/10.1080/09613218.2014.867643}{Uptake of energy
+  efficiency interventions in english dwellings} 42~(3)  255--275, publisher:
+  Routledge \_eprint: https://doi.org/10.1080/09613218.2014.867643.
+\newblock \href {https://doi.org/10.1080/09613218.2014.867643}
+  {\path{doi:10.1080/09613218.2014.867643}}.
+\newline\urlprefix\url{https://doi.org/10.1080/09613218.2014.867643}
+
+\bibitem{building_research_establishment_housing_2018}
+B.~R. Establishment,
+  \href{https://files.bregroup.com/bretrust/The-Housing-Stock-of-the-United-Kingdom_Report_BRE-Trust.pdf}{The
+  housing stock of the united kingdom}.
+\newline\urlprefix\url{https://files.bregroup.com/bretrust/The-Housing-Stock-of-the-United-Kingdom_Report_BRE-Trust.pdf}
+
+\bibitem{vera-toscano_ruralurban_2024}
+E.~Vera-Toscano, M.~Shucksmith, D.~L. Brown, H.~Brown,
+  \href{https://doi.org/10.1080/00343404.2023.2235374}{The rural–urban
+  poverty gap in england after the 2008 financial crisis: exploring the effects
+  of budgetary cuts and welfare reforms} 58~(6)  1264--1281, publisher: {RSA}
+  Website \_eprint: https://doi.org/10.1080/00343404.2023.2235374.
+\newblock \href {https://doi.org/10.1080/00343404.2023.2235374}
+  {\path{doi:10.1080/00343404.2023.2235374}}.
+\newline\urlprefix\url{https://doi.org/10.1080/00343404.2023.2235374}
+
+\bibitem{baker_profile_2003}
+W.~Baker, G.~Starling, A profile of fuel poverty in devon {LASP} and member
+  districts.
+
+\bibitem{scottish_borders_council_lhs_2016}
+S.~B. Council,
+  \href{https://www.scotborders.gov.uk/downloads/file/2400/briefing-paper-housing-quality-and-energy-efficiency}{{LHS}
+  briefing paper: Housing quality \& energy efficiency}.
+\newline\urlprefix\url{https://www.scotborders.gov.uk/downloads/file/2400/briefing-paper-housing-quality-and-energy-efficiency}
+
+\bibitem{baker_predicting_2003}
+W.~Baker, G.~Starling, D.~Gordon, Predicting fuel poverty at the local level.
+  Final report on the development of the Fuel Poverty Indicator.
+\newblock \href {https://doi.org/10.13140/RG.2.1.3353.6403}
+  {\path{doi:10.13140/RG.2.1.3353.6403}}.
+
+\bibitem{abanades_critical_2022}
+S.~Abanades, H.~Abbaspour, A.~Ahmadi, B.~Das, M.~A. Ehyaei, F.~Esmaeilion,
+  M.~El~Haj~Assad, T.~Hajilounezhad, D.~H. Jamali, A.~Hmida, H.~A. Ozgoli,
+  S.~Safari, M.~{AlShabi}, E.~H. Bani-Hani,
+  \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8124099/}{A critical
+  review of biogas production and usage with legislations framework across the
+  globe} 19~(4)  3377--3400.
+\newblock \href {https://doi.org/10.1007/s13762-021-03301-6}
+  {\path{doi:10.1007/s13762-021-03301-6}}.
+\newline\urlprefix\url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8124099/}
+
+\bibitem{mckinsey_company_appendix_2002}
+M.~Company, {APPENDIX}: {UK} {COST} {ABATEMENT} {CURVE}.
+
+\bibitem{penasco_assessing_2023}
+C.~Peñasco, L.~D. Anadón,
+  \href{https://www.sciencedirect.com/science/article/pii/S0140988322005643}{Assessing
+  the effectiveness of energy efficiency measures in the residential sector gas
+  consumption through dynamic treatment effects: Evidence from england and
+  wales} 117  106435.
+\newblock \href {https://doi.org/10.1016/j.eneco.2022.106435}
+  {\path{doi:10.1016/j.eneco.2022.106435}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0140988322005643}
+
+\bibitem{fuerst_does_2015}
+F.~Fuerst, P.~{McAllister}, A.~Nanda, P.~Wyatt,
+  \href{https://www.sciencedirect.com/science/article/pii/S0140988314003296}{Does
+  energy efficiency matter to home-buyers? an investigation of {EPC} ratings
+  and transaction prices in england} 48  145--156.
+\newblock \href {https://doi.org/10.1016/j.eneco.2014.12.012}
+  {\path{doi:10.1016/j.eneco.2014.12.012}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0140988314003296}
+
+\bibitem{zhang_price_2017}
+L.~Zhang, H.~Liu, J.~Wu, \href{https://www.jstor.org/stable/26428397}{The price
+  premium for green-labelled housing: Evidence from china} 54~(15)  3524--3541,
+  publisher: Sage Publications, Ltd.
+\newline\urlprefix\url{https://www.jstor.org/stable/26428397}
+
+\bibitem{zhang_does_2021}
+Y.~Zhang, J.~Li, W.~Tao, Does energy efficiency affect appliance prices?
+  empirical analysis of air conditioners in china based on propensity score
+  matching 101  105435.
+\newblock \href {https://doi.org/10.1016/j.eneco.2021.105435}
+  {\path{doi:10.1016/j.eneco.2021.105435}}.
+
+\end{thebibliography}

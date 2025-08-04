@@ -21,7 +21,7 @@ where $Y_i$ captures Energy Efficiency (score out of 100), Yearly energy Consump
 
 Results from the five OLS regressions (Eq. \ref{eq:general_impacts_OLS}) are presented in Table \ref{tab:ID_impacts} below. Coefficients are all significant (p-value less than 0.0001).  They provide insight into the marginal effects of each completed structural retrofit on the energy efficiency score, energy consumption (in kWh and £), and emissions (in CO2 and impact score) of dwellings. According to table \ref{tab:ID_impacts}, installing a wood pellet stove with boiler and radiator (ID 23 \& 39) can increase a property’s energy efficiency rating by 22.79, making this improvement option the most optimal decision when aiming to increase the EPC score ($Y_1$). As expected, improvement ID 23\&39, also yields the greatest impact with all other dependent variables, resulting in the most impact retrofit available to homeowners from a purely results-based perspective. When comparing across all the regression results, it seems the most ’impactful’ renovations involve improving a dwelling’s heating systems (e.g., Fan assisted storage heaters,
 gas condensing boilers, replacing heating units, etc.). This is consistent with prior findings that the majority of residential energy consumption and associated emissions stem from space and water heating \cite{lowe_technical_2007, kesicki_costs_2012} . Conversely, the recommendations associated with the lowest impact estimates from the models, are mostly associated with fabric energy efficiency and energy conservation measures (i.e., loft insulation, double window glazing, party wall insulation, etc.). The results were appended and used during the subsequent parts of the analysis as indicators of impacts for each dwelling.  
-\input{Tables/ID_impacts}
+\input{src/tables/ID_impacts.tex}
 
 \subsection{Cumulative costs and environmental impacts of reaching EPC-C}
 
@@ -29,7 +29,7 @@ As previously mentioned, property owners are not obligated but highly encouraged
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=1\linewidth]{Figures/decision_model.png}
+    \includegraphics[width=1\linewidth]{src/figures/decision_model.png}
     \caption{Conceptual framework of decision models used to estimate cost of reaching minimum energy efficiency. The strategies were executed as separate rule-based algorithms applied to the latest energy performance certificates for every unique properties.}
     \label{fig:decision_models}
 \end{figure}
@@ -39,15 +39,15 @@ The cumulative costs of achieving the EPC cap was determined for each nuanced re
 
 % Include the table on total costs
 % add ordered by carbon reduction, remove ENv column
-\input{Tables/EPC69_results}
+\input{src/tables/EPC69_results.tex}
 
 According to the table therein, the “cheapest” aggregate option to reach an EPC of 69 is achieved when property owners opt in for the improvement that can yield the highest impact on energy efficiency for the lowest price. This option would require significant investments in Solar Photovoltaic Panels (nearly 4 million across the UK) and over £13 billion national investments for external wall insulations (see table \ref{costs_yield}). Following this decision mode, reaching an EPC of 69 would require households to spend £6597 on retrofitting costs on average which would present significant savings when compared to the order recommended by the EPC assessments. Indeed, to achieve an EPC of 69 following the SAP recommendations, the average household would have to spend nearly £9000 on retrofitting costs, most of which would require investment in PV panels and solar water heating. See Appendix \ref{sec:appendix} for other improvement strategies. This confirms \cite{billio_learning_2024} study which suggested applying more complex and sophisticated methods of selecting structural improvements result in cheaper and more efficient outcomes. While the low-hanging fruit strategies (by yield or by price) provide the most cost-effective means of achieving MEES, they do not effectively reduce $CO_2$ emissions as much as strategies focused on impact.  Similarly, following the EPC recommendations result in less emission reductions but yield the highest reduction in energy consumption (expressed in GWh per area in Table \ref{EPC_69_costs}). These observations confirm \cite{kelly_building_2012} suggestions that the SAP methodologies and recommendations may create perverse incentives to reduce energy consumption rather than limit environmental damages. \\
- \input{Tables/Improvements_Cap69_byYield_sorted}
+ \input{src/tables/Improvements_Cap69_byYield_sorted.tex}
  
 While the average reported costs for the each retrofitting strategies are specified in table \ref{EPC_69_costs}, the uni-dimensional values do not capture the heterogeneous costs across difference properties. The density plot (Figure \ref{fig:density_plot}) reveals the variation of house price around the mean reported cost following the EPC recommendations (red-dashed line).  The multi-modal distribution of retrofitting costs seem to suggest costs are grouped into multiple price ranges - potentially indicating groups of similar property characteristics. Retrofitting costs seem to be similar across price ranges. The majority of homes likely require low retrofitting costs while the long-tail suggests certain outliers require expensive investments to achieve the minimum energy efficiency standards - most of which seem to be higher priced homes (500k+). These tails persisted despite excluding the top 1\% most expensive properties to retrofitting. Out of nearly $4.45 $ million dwellings analysed, $60.95\%$ of those able to reach a minimum EPC score of 69 endure retrofitting costs less than \textsterling $ 10,000$  to retrofit, while only  $28.39\%$ fall below \textsterling  $3,500$ - according to the EPC retrofitting strategy.  \\
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=1\linewidth]{Figures/Combined_Density_Costs.png}
+    \includegraphics[width=1\linewidth]{src/figures/Combined_Density_Costs.png}
     \caption{Density plot of absolute (a.) and relative (b.) household retrofitting costs from following EPC recommendations (Strategy 1) to reach hypothetical MEES of EPC - C. Relative costs were determined as percent of property value as of latest transaction. The dashed line in subplot a. represents the average retrofitting cost per household according to this strategy (\textsterling 9,058 according to Table \ref{EPC_69_costs}). Top 1\% of properties with high retrofitting costs were excluded (winsorized at 99\%) to avoid outliers.}
     \label{fig:density_plot}
 \end{figure}
@@ -55,7 +55,7 @@ While the average reported costs for the each retrofitting strategies are specif
 \noindent While an estimate $15.6 $ million registered dwellings were considered 'able to improve their energy efficiency' according to their EPC \footnote{A dwelling considered 'able to improve' here refers to EPCs including improvement recommendations and a differing potential energy efficiency as outputted by the SAP software. } , $6$ million observations had above-standard energy efficiencies and $1$ million properties were unable to every reach a minimum C-Band energy rating (EPC Score of 69) as their 'potential energy efficiency' fell below such threshold. According to the 2015 Energy Efficiency Regulations, dwellings unable to meet MEES require to retrofit until reaching full energy efficiency potential or spending above the a maximum retrofitting budget set by the government. Retrofitting costs the all properties were then computed analogous methodologies and summarized in Table \ref{tab:table5_costsdescription}. 
 
 % add unable to improve at all, and unable to spend at least 10k?
-\input{Tables/Table5_retrofit_descriptive}
+\input{src/tables/Table5_retrofit_descriptive.tex}
 
 
 
@@ -78,7 +78,7 @@ Given that the total floor area is used in the SAP methodology to determine ener
 
 the hedonic price models were executed as OLS regressions using the \texttt{feos} plackage in R \cite{bergman_reframing_2020, berge_efficient_2018} on $10.4$ million transactions. The regressions results are displayed in table \ref{tab:hedonic_model}.  In line with expectations, the analysis reveals that energy efficiency is a statistically significant predictor of transaction price (p-value \textless 0.0001). In the simple hedonic model (Table \ref{tab:hedonic_model}), the coefficient associated with energy efficiency indicates a positive impact on transaction price, with an estimated hedonic premium of approximately £486.72 for every additional improvement in the Energy improvement score. Since the average improvement in energy efficiency across all properties is of 15, the estimates therein would result in an average net green premium of \textsterling $7,331.85$. This suggests that homes with higher energy efficiency ratings tend to command higher prices in the housing market, likely reflecting buyers' willingness to pay \cite{ghosh_homebuyers_2024}. \\
 
-\input{Tables/hedonic_results}
+\input{src/tables/hedonic_results.tex}
 
 When accounting for time-varying controls through the use of other fixed effects, namely monthly interest rates and number of properties listed for sale in the same region, the estimate is reduced to approximately £207.80 (Table \ref{tab:hedonic_model}). The reduction in the coefficient suggests that the initial model may have overestimated the impact of energy efficiency by not accounting for unobserved, unit-specific characteristics that do not vary over time. When controlling for the supply of housing (measured by the number of listings), the adjusted $R^2$ value increased significantly compared to the other models. This improvement in the model's explanatory power underscores the importance of controlling for a broad range of factors that influence housing prices, beyond just energy efficiency. \\
 
@@ -90,6 +90,6 @@ For this the sale price elasticity were parametrically estimated from the given 
 \end{align*}
 
 According to the properties at risk and potential decision framework to sell or rent therein, over $500$ thousand properties risk entering the housing market for sale.\footnote{all properties with construction age before 1949 and in districts with high retrofitting cost and high fuel-poverty (nealry 2.6 million) and adjusted for the estimated 19\% of dwellings for rent} These refer to homes current renting that may be forced to sale faced with imposed MEES. This may have significant impacts on the UK housing market. According to the results (table \ref{table:coefficients}) elasticity is significant and is estimated that for every additional 1\% in active listings, property prices decrease by 2\%. Since about 8.1 million properties were currently listed in the market (from dataset), an additional 6.3\% properties might enter the market as a result of the MEES. Inducing a 11.3\% drop in property prices.
-\input{Tables/elasticity_results}
+\input{src/tables/elasticity_results.tex}
 
 While the estimates above represent an immediate effect of the induced supply shock, which will inevitably decrease with time \cite{fibich_dynamics_2005}, it is highly significant. The increased supply of homes may have direct effects on the local housing prices but also have knock-on effects on neighbouring regions which buyers consider subsitutable \cite{fingleton_housing_2019} . This may have implications on the current housing crisis by increasing the supply of homes and potentially increase affordability across the UK.
