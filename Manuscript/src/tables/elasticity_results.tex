@@ -1,0 +1,38 @@
+\begin{table}[ht]
+\centering
+\caption{Regression results showing the effects of base rate and other predictors on ln of growth\_price.}
+\resizebox{0.3\textwidth}{!}{ 
+\begin{tabular}{@{}l c@{}}
+\toprule
+\toprule
+\textit{Independent Variables} & \textbf{House Price (\textsterling)} \\
+\midrule
+\addlinespace
+\textbf{ln Active Sales}            & $-0.02^{**}$  \\
+                                     & $(0.00)$      \\
+\addlinespace                            
+Interest Rates             & $0.02^{*}$    \\
+                                     & $(0.01)$      \\
+\addlinespace
+Ajd. Interest Rates              & $-0.01^{*}$   \\
+                                     & $(0.00)$      \\
+\midrule
+N.                    & $3,359,780$   \\
+R$^2$        & $0.03$        \\
+Adj R$^2$      & $0.01$        \\
+
+\midrule
+Property Type & \textit{yes}         \\
+District   & \textit{yes}         \\
+Year   & \textit{yes}       \\
+Month       & \textit{yes}         \\
+
+\bottomrule
+\addlinespace    
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\scriptsize{\textit{\scriptsize{{\textbf{NOTES:} These estimates are the results of OLS regressions. The table reports the effect of supply (number of active sales) on property transaction prices (dependent variable). Robust standard errors in parentheses. Significance levels are indicated as $^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$.}}}}
+\end{minipage}
+\label{table:coefficients}
+\end{table}

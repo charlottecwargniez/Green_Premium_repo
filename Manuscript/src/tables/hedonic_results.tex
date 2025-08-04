@@ -1,0 +1,38 @@
+\begin{table}[ht]
+\centering
+\caption{Regression Results: Hedonic Price Models with Fixed Effects}
+\resizebox{\textwidth}{!}{ 
+\begin{tabular}{l c c c c}
+\toprule
+\toprule
+& \textit{Simple Hedonic Model}  & \textit{Hedonic Model FE}  & \textit{With Interest Rates}  & \textit{With Listings} \\
+\textit{Independent Variable}         & (1) & (2) & (3) & (4) \\
+\midrule
+Energy Efficiency & $500.88^{***}$ & $486.85^{***}$ & $483.26^{***}$ & $408.46^{***}$  \\
+                  & $(5.54)$       & $(5.57)$       & $(5.56)$       & $(7.92)$        \\
+\addlinespace
+\midrule
+Adj. R-Square     & $0.37$         & $0.37$         & $0.37$         & $0.45$          \\
+N                 & $8,923,015$    & $8,923,015$    & $8,923,015$    & $4,001,425$     \\
+\addlinespace
+\midrule
+Total Floor Area          & \textit{Yes}    & \textit{Yes}    & \textit{Yes}    & \textit{Yes}    \\
+Property Type             & \textit{Yes}    & \textit{Yes}    & \textit{Yes}    & \textit{Yes}    \\
+Number of Habitable Rooms & \textit{Yes}    & \textit{Yes}    & \textit{Yes}    & \textit{Yes}    \\
+Extension Count           & \textit{Yes}    & \textit{Yes}    & \textit{Yes}    & \textit{Yes}    \\
+Built Form                & \textit{Yes}    & \textit{Yes}    & \textit{Yes}    & \textit{Yes}    \\
+Construction Age Band     & \textit{Yes}    & \textit{Yes}    & \textit{Yes}    & \textit{Yes}    \\
+YEAR Time-Fixed Effects   & \textit{No}     & \textit{Yes}    & \textit{Yes}     & \textit{Yes}     \\
+MONTH Time-Fixed Effects  & \textit{No}     & \textit{Yes}    & \textit{Yes}     & \textit{Yes}     \\
+Monthly Interest Rates    & \textit{No}     & \textit{No}     & \textit{Yes}    & \textit{Yes}     \\
+Active Listings           & \textit{No}     & \textit{No}     & \textit{No}     & \textit{Yes}    \\
+\bottomrule
+\bottomrule
+\addlinespace
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\scriptsize{\textit{\scriptsize{{\textbf{NOTES:} These estimates are the results of OLS regressions. The table reports the effect of energy efficiency score (out of 100) on property transaction prices (dependent variable). The coefficients represent the change (in \textsterling) in the dependent variable (price) per unit change in the independent variable (energy efficiency). The first column reports the results for the simple hedonic model without time fixed effect and the second column includes the time fixed effects. Regressions include household fixed effects, along with time controls in the second column. Columns (3) and (4) use monthly interest rates and average yearly sale listings by region as fixed effects, respectively. Robust standard errors in parentheses. Significance levels are indicated as $^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$.}}}}
+\end{minipage}
+\label{tab:hedonic_model}
+\end{table}
