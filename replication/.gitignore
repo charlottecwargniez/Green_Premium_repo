@@ -1,0 +1,11 @@
+# Data are never committed (licences / size). Only hand-curated inputs ship.
+!data/
+data/raw/*
+data/intermediate/*
+!data/**/.gitkeep
+output/*
+!output/.gitkeep
+.Rproj.user/
+.Rhistory
+.RData
+.DS_Store
